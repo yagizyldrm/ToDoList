@@ -3,7 +3,8 @@ const constantColors = {
     white: '#FFFFFF',
     black: '#000000',
     transparent: 'transparent',
-    pink: '#ff9cf7'
+    pink: '#ff9cf7',
+    blue: '#189ad3', //seçtiğimiz mavi
 };
 
 const toRGBA = (hexCode, opacity) => {
@@ -33,14 +34,30 @@ export const colorNames = {
         paleButtonText: 'auth/paleButtonText',
         appNameText: 'auth/appNameText',
     },
+    todo: {
+        background: 'todo/background',
+        headerText: 'todo/headerText',
+        contentBorder: 'todo/contentBorder',
+        checkBoxColor: 'todo/checkBoxColor',
+    },
+    settings: {
+        background: 'settings/background',
+    },
 };
 
 export const darkColors = {
     // auth
     [colorNames.auth.background]: constantColors.pink, // örnek
+
+    //todo
+    [colorNames.todo.background]: constantColors.blue,
 };
 
 export const lightColors = {
     // auth
     [colorNames.auth.background]: constantColors.pink, // örnek
+
+    //todo
+    [colorNames.todo.background]: constantColors.blue,
+
 };
