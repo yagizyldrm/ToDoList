@@ -10,7 +10,11 @@ const styles = StyleSheet.create({
     },
     optionTouchable:{
         flexDirection:"row",
+        marginVertical:5,
+        marginLeft:5,
         color:"black",
+        alignItems:"center"
+        
     },
     iconContainer:{
         width:20,
@@ -22,6 +26,7 @@ const styles = StyleSheet.create({
     optionTitleText:{
         fontWeight:"normal",
         fontSize:20,
+        marginLeft:5,
     }
 })
 
