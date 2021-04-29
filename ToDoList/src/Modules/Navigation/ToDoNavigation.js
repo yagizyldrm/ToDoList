@@ -65,7 +65,18 @@ const ToDoNavigation = () => {
             />
             <ToDoStack.Screen
                 name="settings-screen"
-                component={SettingsScreen} />
+                component={SettingsScreen}
+                options={{
+                    title: "Settings",
+                    headerStyle: {
+                        backgroundColor: '#189ad3',
+                    },
+                    headerTitleAlign: 'center',
+                    headerTitleStyle: {
+                        color: 'white',
+                    }
+                }}
+            />
         </ToDoStack.Navigator>
     );
 };
