@@ -22,7 +22,7 @@
    return (
      <Provider store={store}>
        <PersistGate loading={null} persistor={persistor}>
-         <MainNavigation />
+         <MainNavigation />   
        </PersistGate>
      </Provider>
    );

@@ -1,11 +1,12 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import DummyNavigation from './DummyNavigation';
+import ToDoNavigation from './ToDoNavigation';
+
 
 const MainNavigation = (props) => {
     return (
         <NavigationContainer>
-            <DummyNavigation />
+            <ToDoNavigation />
         </NavigationContainer>
     );
 };
