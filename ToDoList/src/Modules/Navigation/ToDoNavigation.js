@@ -5,13 +5,13 @@ import { createStackNavigator, HeaderTitle } from '@react-navigation/stack';
 
 import SettingsScreen from "./Screens/SettingsScreen";
 import ToDoScreen from './Screens/ToDoScreen';
-// import SettingsIcon from './SettingsIcon';
+import SettingsIcon from './SettingsIcon';
 
 
 const ToDoStack = createStackNavigator();
 
 const ToDoNavigation = () => {
-
+    console.log('todoNavigation');
     return (
         <ToDoStack.Navigator>
             <ToDoStack.Screen
@@ -26,7 +26,7 @@ const ToDoNavigation = () => {
                     headerTitleStyle: {
                         color: 'white',
                     },
-                    // headerRight: SettingsIcon,
+                    headerRight: SettingsIcon,
                 }}
             />
             <ToDoStack.Screen

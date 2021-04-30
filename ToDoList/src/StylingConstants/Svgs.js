@@ -1,4 +1,5 @@
-import SettingsIcon from '../Assets/Svgs/settingsIcon.svg';
+import SettingsIcon from '../Assets/Svgs/settings.svg';
+console.log('SVGsettingsIcon')
 
 export default {
     SettingsIcon,
