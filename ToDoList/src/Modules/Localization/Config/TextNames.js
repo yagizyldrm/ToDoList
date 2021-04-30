@@ -1,3 +1,50 @@
-export const Texts = {
-    hello: 'hello',
+export const texts = {
+    settings: 'settings',
+    email:"email",
+    password:"password",
+    colorTheme:"colorTheme",
+    dark:"dark",
+    light:"light",
+    language:"language",
+    english:"english",
+    turkihs:"turkish",
+    signOut:"signOut",
+    toDoList:"toDoList",
+    signIn:"signIn",
+    login:"login",
+    username:"username"
+};
+
+export const english={
+    [texts.settings]:"Settings",
+    [texts.email]:"E-Mail",
+    [texts.password]:"Password",
+    [texts.colorTheme]:"Color Theme",
+    [texts.language]:"Language",
+    [texts.english]:"English",
+    [texts.Turkish]:"Türkçe",
+    [texts.toDoList]:"ToDo List",
+    [texts.login]:"Login",
+    [texts.dark]:"Dark Mode",
+    [texts.email]:"Light Mode",
+    [texts.signOut]:"Sign Out",
+    [texts.signIn]:"Sign In",
+    [texts.username]:"Username",
+};
+
+export const turkish ={
+    [texts.settings]:"Ayarlar",
+    [texts.email]:"E-Mail",
+    [texts.password]:"Şifre",
+    [texts.colorTheme]:"Renk Teması",
+    [texts.language]:"Diller",
+    [texts.english]:"English",
+    [texts.Turkish]:"Türkçe",
+    [texts.toDoList]:"Yapılacaklar",
+    [texts.login]:"Giriş Yap",
+    [texts.dark]:"Siyah Tema",
+    [texts.email]:"Beyaz Tema",
+    [texts.signOut]:"Çıkış Yap",
+    [texts.signIn]:"Kayıt Ol",
+    [texts.username]:"Kullanıcı Adı",
 };
