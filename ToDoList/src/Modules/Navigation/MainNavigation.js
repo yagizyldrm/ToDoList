@@ -5,7 +5,7 @@ import AuthNavigation from './AuthNavigation';
 
 const MainNavigation = (props) => {
   
-    const isLoggedInUser = true;
+    const isLoggedInUser = false;
    
     return (
         <NavigationContainer>
@@ -20,3 +20,4 @@ const MainNavigation = (props) => {
 };
 
 export default MainNavigation;
+
