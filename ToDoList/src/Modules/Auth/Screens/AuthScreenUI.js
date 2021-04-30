@@ -1,13 +1,16 @@
 import React from 'react';
 import { View, Text, SafeAreaView, KeyboardAvoidingView, TouchableOpacity, Keyboard, Image } from 'react-native';
-import styles from '../styles/AuthScreenStyles'
-import { Images } from '../../../StylingConstants/'
-import AuthInput from '../Components/AuthInput'
-import AuthButton from '../Components/AuthButton'
+import styles from '../styles/AuthScreenStyles';
+import { Images } from '../../../StylingConstants/';
+import AuthInput from '../Components/AuthInput';
+import AuthButton from '../Components/AuthButton';
+import Icon from '../../../Components/Icon';
+import {Svgs} from '../../../StylingConstants';
 
 const AuthScreen = () => {
 
     const isLogin = false;
+
 
     return (
         <SafeAreaView style={styles.safeArea}>
@@ -20,23 +23,47 @@ const AuthScreen = () => {
                     activeOpacity={1}
                     onPress={Keyboard.dismiss}
                 >
-                    <View style={styles.appLogoContainer}>
-                        <Image source={Images.appLogo} style={styles.image} />
+
+
+
+
+
+<View style={styles.appLogoContainer}>
+<View style={styles.authLogoContainer}>
+                    <Icon svg={Svgs.AuthScreenLogo} iconStyle={{color: 'purple'}}/>
+                </View>
+</View>
+
+                
+                    <View style={styles.appNameContainer}>
+                        <Text style={styles.appNameText}>TODO</Text>
                     </View>
-                    <View style={styles.inputsContainer}>
-                        {
+<View style={styles.inputsContainer}>
+                    {
                             isLogin ?
                                 null
                                 :
+                                <View >
+                                    <AuthInput
+                                         placeholder=' kullanıcı adı' />
+                                </View>
+                        }
+                        <View >
+                            <AuthInput
+                                placeholder=' e-mail' />
+                        </View>
 
-                                <AuthInput
-                                    placeholder=' kullanıcı adı'
-                                />}
-                        <AuthInput
-                            placeholder=' e-mail' />
-                        <AuthInput
-                            placeholder=' şifre' />
+                        <View >
+                            <AuthInput
+
+                                placeholder='şifre'
+/>
+                        </View>
                     </View>
+
+
+
+
                     <View style={styles.buttonsContainer}>
                     <AuthButton
                             onPress={isLogin ? ()=>{} : ()=>{}}
@@ -45,11 +72,13 @@ const AuthScreen = () => {
 
                             
                         <TouchableOpacity style={styles.signupTouchable} onPress={() =>{} }>
+
                             <Text style={styles.signupText}>
                                 KAYIT OL
                             </Text>
                         </TouchableOpacity>
                     </View>
+
                 </TouchableOpacity>
             </KeyboardAvoidingView>
         </SafeAreaView>
@@ -57,3 +86,10 @@ const AuthScreen = () => {
 }
 
 export default AuthScreen
+
+
+/*
+                    <View style={styles.appLogoContainer}>
+                        <Image source={Images.appLogo} style={styles.image} />
+                    </View>
+                    */
