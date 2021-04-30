@@ -7,7 +7,7 @@ import AuthButton from '../Components/AuthButton'
 
 const AuthScreen = () => {
 
-    const isLogin = true;
+    const isLogin = false;
 
     return (
         <SafeAreaView style={styles.safeArea}>
@@ -41,7 +41,9 @@ const AuthScreen = () => {
                     <AuthButton
                             onPress={isLogin ? ()=>{} : ()=>{}}
                             disabled={false}
-                            text={isLogin ? 'GİRİŞ YAP' : 'KAYIT OL'} />    
+                            text={isLogin ? 'GİRİŞ YAP' : 'çıkış'} />    
+
+                            
                         <TouchableOpacity style={styles.signupTouchable} onPress={() =>{} }>
                             <Text style={styles.signupText}>
                                 KAYIT OL

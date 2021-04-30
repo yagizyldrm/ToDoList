@@ -9,13 +9,15 @@ const AuthButton = (props) => {
     return (
         <BorderedBox
         borderColor='#71c7ec'
-        backgroundColor={'blue'}>
+        backgroundColor='white'
+        >
         <TouchableOpacity
             style={styles.touchable}
             onPress={props.onPress}
             disabled={props.disabled}>
             <Text style={styles.text}>{props.text}</Text>
         </TouchableOpacity>
+        
     </BorderedBox>
     );
 };

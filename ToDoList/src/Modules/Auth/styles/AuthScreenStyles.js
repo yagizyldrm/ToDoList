@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
-import { Metrics } from '../../../StylingConstants';
+import { Metrics,Fonts } from '../../../StylingConstants';
+import type from '../../../StylingConstants/Fonts'
+
 
 const styles = StyleSheet.create({
     safeArea: {
@@ -36,8 +38,10 @@ const styles = StyleSheet.create({
     signupTouchable: {
         alignItems: 'center',
         marginTop: Metrics.width * 0.02,
-
     },
+    signupText: {
+        fontFamily: Fonts.type.bold
+    }
 });
 
 export default styles;

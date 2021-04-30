@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import { Fonts } from '../../../StylingConstants';
 
 const styles = StyleSheet.create({
     touchable: {
@@ -9,6 +10,7 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 18,
         color: 'black',
+        fontFamily: Fonts.type.bold
     },
 });
 
