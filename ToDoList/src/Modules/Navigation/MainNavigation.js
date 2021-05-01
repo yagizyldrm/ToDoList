@@ -6,7 +6,6 @@ import AuthNavigation from './AuthNavigation';
 const MainNavigation = (props) => {
   
     const isLoggedInUser = false;
-
     return (
         <NavigationContainer>
             {
