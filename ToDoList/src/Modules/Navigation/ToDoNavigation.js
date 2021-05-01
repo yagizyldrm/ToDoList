@@ -6,34 +6,6 @@ import SettingsScreen from "./Screens/SettingsScreen";
 import ToDoScreen from './Screens/ToDoScreen';
 import SettingsIcon from './SettingsIcon';
 
-const ToDoScreen = props => {
-    const navigation = useNavigation();
-    return (
-        <>
-            <View style={{
-                flex:1,
-            }}>
-                <TouchableOpacity onPress={() => navigation.navigate('settings-screen')}>
-                    <Text>Deneme</Text>
-                </TouchableOpacity>
-            </View>
-            <View style={{
-                alignItems: 'flex-end',
-                justifyContent: 'flex-end'
-                }}>
-                <Button
-                    title='ekle'
-                    style={{
-                        color:"#000000",
-                        width:20,
-                        height: 20,
-                    }}
-                />
-            </View>
-        </>
-    );
-}
-
 const ToDoStack = createStackNavigator();
 
 const ToDoNavigation = () => {
