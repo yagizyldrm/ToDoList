@@ -5,6 +5,12 @@ const constantColors = {
     transparent: 'transparent',
     pink: '#ff9cf7',
     blue: '#189ad3', //seçtiğimiz mavi
+    greys: {
+        1: '#383838',
+        2: '#ACACAC',
+        3: '#868686',
+        4: '#BCBCBC',
+    },
 };
 
 const toRGBA = (hexCode, opacity) => {
@@ -42,6 +48,14 @@ export const colorNames = {
     },
     settings: {
         background: 'settings/background',
+        radioButtonSelected: 'settings/radioButtonSelected',
+        radioButtonUnselected: 'settings/radioButtonUnselected',
+        signOutBorder:'settings/signOutBorder',
+        signOutButtonBackground:'settings/signOutButtonBackground',
+        signOutText:'settings/singOutText',
+        titleColor:'settings/titleColor',
+        username:"settings/username",
+        eMail:"settings/eMail",
     },
 };
 
@@ -51,6 +65,16 @@ export const darkColors = {
 
     //todo
     [colorNames.todo.background]: constantColors.blue,
+    //settings
+    [colorNames.settings.background]: constantColors.black,
+    [colorNames.settings.radioButtonSelected]: constantColors.blue,
+    [colorNames.settings.radioButtonUnselected]: constantColors.white,
+    [colorNames.settings.signOutBorder]: constantColors.blue,
+    [colorNames.settings.signOutText]: constantColors.white,
+    [colorNames.settings.titleColor]: constantColors.blue,
+    [colorNames.settings.signOutButtonBackground]: constantColors.black,
+    [colorNames.settings.eMail]:constantColors.white,
+    [colorNames.settings.username]:constantColors.white,
 };
 
 export const lightColors = {
@@ -60,4 +84,14 @@ export const lightColors = {
     //todo
     [colorNames.todo.background]: constantColors.blue,
 
+    //settings
+    [colorNames.settings.background]: constantColors.white,
+    [colorNames.settings.radioButtonSelected]: constantColors.blue,
+    [colorNames.settings.radioButtonUnselected]: constantColors.black,
+    [colorNames.settings.signOutBorder]: constantColors.blue,
+    [colorNames.settings.signOutText]: constantColors.black,
+    [colorNames.settings.signOutButtonBackground]: constantColors.white,
+    [colorNames.settings.titleColor]: constantColors.blue,
+    [colorNames.settings.username]: constantColors.black,
+    [colorNames.settings.eMail]:constantColors.black,
 };

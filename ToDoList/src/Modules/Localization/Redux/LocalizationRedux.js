@@ -1,8 +1,11 @@
 
 /* ------------- Initial State ------------- */
 
+import { Locales } from "../LocalizationConstants";
+
+
 export const INITIAL_STATE = {
-    locale: 'tr',
+    locale: Locales.turkish,
 };
 
 /* ------------- Types and Action Creators ------------- */
@@ -12,7 +15,7 @@ const Types = {
 };
 
 const Actions = {
-    changeLocale: ({ locale }) => ({
+    changeLocale: ( locale ) => ({
         type: Types.CHANGE_LOCALE,
         payload: { locale },
     }),
@@ -25,7 +28,7 @@ export const LocalizationActions = Actions;
 
 export const LocalizationSelectors = {
     locale: state => state.localization.locale,
-  };
+}
 
 /* ------------- Reducers ------------- */
 

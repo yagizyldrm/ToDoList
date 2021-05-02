@@ -1,4 +1,4 @@
 export const Locales = {
-    english: 'en',
-    turkish: 'tr',
+    english: 'english',
+    turkish: 'turkish',
 };

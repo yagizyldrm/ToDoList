@@ -2,7 +2,8 @@ export {
     useTheme,
     useThemedColors, 
     useThemedStyles, 
-    useThemedOption, 
+    useThemeOption, 
+    useThemedValues,
     useDispatchChangeTheme,
  } from './CustomHooks/ThemingHooks';
 export { ThemeReducer } from './Redux/ThemingRedux';
