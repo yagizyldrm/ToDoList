@@ -1,31 +1,32 @@
 import { StyleSheet } from 'react-native';
+import { colorNames } from '../../../Theming/Colors';
 import { Metrics } from '../../../../StylingConstants';
 
-const styles = StyleSheet.create({
+export default Colors => StyleSheet.create({
 
     container: {
         flex: 1,
-        backgroundColor: 'pink',
+        backgroundColor: Colors[colorNames.todo.background],
     },
     addButton: {
-        alignItems: 'flex-end',
-        justifyContent: 'flex-end',
-        padding: 20,
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'absolute',
         backgroundColor: 'transparent',
-        width: Metrics.width * 0.2,
-        height: undefined,
-        borderRadius: 1000,
-        flexDirection: 'row',
+        width: Metrics.width * 0.18,
+        height: Metrics.width * 0.18,
+        flexDirection: 'column',
+        marginTop: Metrics.width * 1.525,
+        marginLeft: Metrics.width * 0.82,
+        
     },
     iconContainer: {
-        width: Metrics.width * 0.09,
-        height: Metrics.width * 0.09,
+        width: Metrics.width * 0.146,
+        height: Metrics.width * 0.146,
         aspectRatio: 1,
-        justifyContent: 'flex-end',
-        alignItems: 'flex-end',
     },
     icon: {
-        color: 'lightblue',
+        color: Colors[colorNames.todo.addButton],
         justifyContent: 'flex-end',
         alignItems: 'flex-end',
         borderRadius: 50,
@@ -36,8 +37,5 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
         alignItems: 'flex-end',
         marginLeft: 60,
-        backgroundColor: 'blue',
     },
 });
-
-export default styles;

@@ -1,19 +1,19 @@
 import { StyleSheet } from 'react-native';
-import {Metrics} from '../../../StylingConstants';
+import {Fonts, Metrics} from '../../../StylingConstants';
+import {colorNames} from '../../Theming'
 
 
-const styles = StyleSheet.create({
+const styles = (Colors) => StyleSheet.create({
     inputContainer: {
         flex:1,
         paddingHorizontal: Metrics.textMargin,
-        backgroundColor: '#189ad3',
+        backgroundColor: Colors[colorNames.auth.inputBackground]
     },
     input: {
-        borderWidth: 1,
-        borderRadius: 10,
-        backgroundColor: '#71c7ec',
-        borderColor:'#107dac',
-        
+        flex: 1,
+        fontSize: Fonts.size(15),
+        fontFamily: Fonts.type.light,
+        color: Colors[colorNames.auth.inputText]  
     },
 });
 

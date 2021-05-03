@@ -1,15 +1,24 @@
 import React, { useState } from 'react';
 import { View, Text, SafeAreaView, KeyboardAvoidingView, TouchableOpacity, Keyboard, Image } from 'react-native';
-import styles from '../styles/AuthScreenStyles';
+import getStyles from '../styles/AuthScreenStyles';
 import { Images } from '../../../StylingConstants/';
 import AuthInput from '../Components/AuthInput';
 import AuthButton from '../Components/AuthButton';
 import Icon from '../../../Components/Icon';
 import { Svgs } from '../../../StylingConstants';
+import { useThemedStyles } from '../../Theming';
+import { useLocale, useLocalization, texts } from '../../Localization';
 
 const AuthScreen = () => {
 
     const [isLogin, setIsLogin] = useState(true);
+
+    const styles = useThemedStyles(getStyles);
+    const loc = useLocalization();
+
+    const locale = useLocale();
+    const loginUppercase = loc.t(texts.login).toLocaleUpperCase(locale);
+    const signupUppercase = loc.t(texts.signUp).toLocaleUpperCase(locale);
 
     return (
         <SafeAreaView style={styles.safeArea}>
@@ -23,7 +32,7 @@ const AuthScreen = () => {
                     onPress={Keyboard.dismiss}>
                     <View style={styles.appLogoContainer}>
                         <View style={styles.authLogoContainer}>
-                            <Icon svg={Svgs.AuthScreenLogo} iconStyle={{ color: 'purple' }} />
+                            <Icon svg={Svgs.AuthScreenLogo} iconStyle={styles.icon} />
                         </View>
                     </View>
                     <View style={styles.appNameContainer}>
@@ -34,18 +43,18 @@ const AuthScreen = () => {
                             isLogin ?
                                 null
                                 :
-                                <View >
+                                <View style={styles.inputContainer}>
                                     <AuthInput
-                                        placeholder=' kullanıcı adı' />
+                                        placeholder={loc.t(texts.username)} />
                                 </View>
                         }
-                        <View >
+                        <View style={styles.inputContainer}>
                             <AuthInput
-                                placeholder=' e-mail' />
+                                placeholder={loc.t(texts.eMail)} />
                         </View>
-                        <View >
+                        <View style={styles.inputContainer}>
                             <AuthInput
-                                placeholder='şifre'
+                                placeholder={loc.t(texts.password)}
                             />
                         </View>
                     </View>
@@ -53,10 +62,10 @@ const AuthScreen = () => {
                         <AuthButton
                             onPress={isLogin ? () => { } : () => { }}
                             disabled={false}
-                            text={isLogin ? 'GİRİŞ YAP' : 'KAYIT OL'} />
+                            text={isLogin ? loginUppercase : signupUppercase} />
                         <TouchableOpacity style={styles.signupTouchable} onPress={() => setIsLogin(!isLogin)}>
                             <Text style={styles.signupText}>
-                            {isLogin ? 'Kayıt Ol' : 'Giriş Yap'}
+                            {isLogin ? loc.t(texts.signUp) : loc.t(texts.login)}
                             </Text>
                         </TouchableOpacity>
                     </View>
@@ -67,10 +76,3 @@ const AuthScreen = () => {
 }
 
 export default AuthScreen
-
-
-/*
-<View style={styles.appLogoContainer}>
-    <Image source={Images.appLogo} style={styles.image} />
-</View>
-*/
