@@ -24,7 +24,7 @@ const ToDoNavigation = () => {
                 name="todo-screen"
                 component={ToDoScreen}
                 options={{
-                    title: "ToDo List",
+                    title: loc.t(texts.toDoList),
                     headerStyle: {
                         backgroundColor: '#189ad3',
                     },
