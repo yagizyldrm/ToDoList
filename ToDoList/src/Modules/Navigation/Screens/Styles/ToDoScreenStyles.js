@@ -1,11 +1,12 @@
 import { StyleSheet } from 'react-native';
+import { colorNames } from '../../../Theming/Colors';
 import { Metrics } from '../../../../StylingConstants';
 
-const styles = StyleSheet.create({
+export default Colors => StyleSheet.create({
 
     container: {
         flex: 1,
-        backgroundColor: 'pink',
+        backgroundColor: Colors[colorNames.todo.background],
     },
     addButton: {
         alignItems: 'center',
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
         aspectRatio: 1,
     },
     icon: {
-        color: 'lightblue',
+        color: Colors[colorNames.todo.addButton],
         justifyContent: 'flex-end',
         alignItems: 'flex-end',
         borderRadius: 50,
@@ -36,8 +37,5 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
         alignItems: 'flex-end',
         marginLeft: 60,
-        backgroundColor: 'blue',
     },
 });
-
-export default styles;

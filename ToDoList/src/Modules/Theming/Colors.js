@@ -5,6 +5,7 @@ const constantColors = {
     transparent: 'transparent',
     pink: '#ff9cf7',
     blue: '#189ad3', //seçtiğimiz mavi
+
     greys: {
         1: '#383838',
         2: '#ACACAC',
@@ -45,6 +46,7 @@ export const colorNames = {
         headerText: 'todo/headerText',
         contentBorder: 'todo/contentBorder',
         checkBoxColor: 'todo/checkBoxColor',
+        addButton: 'todo/addButton',
     },
     settings: {
         background: 'settings/background',
@@ -64,7 +66,9 @@ export const darkColors = {
     [colorNames.auth.background]: constantColors.pink, // örnek
 
     //todo
-    [colorNames.todo.background]: constantColors.blue,
+    [colorNames.todo.background]: constantColors.black,
+    [colorNames.todo.addButton]: constantColors.blue,
+
     //settings
     [colorNames.settings.background]: constantColors.black,
     [colorNames.settings.radioButtonSelected]: constantColors.blue,
@@ -82,7 +86,8 @@ export const lightColors = {
     [colorNames.auth.background]: constantColors.pink, // örnek
 
     //todo
-    [colorNames.todo.background]: constantColors.blue,
+    [colorNames.todo.background]: constantColors.white,
+    [colorNames.todo.addButton]: constantColors.blue,
 
     //settings
     [colorNames.settings.background]: constantColors.white,
