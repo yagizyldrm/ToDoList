@@ -18,7 +18,6 @@ const SettingsScreen = props => {
     const currentLocale = useLocale();
     const loc = useLocalization();
     const localeOptions = useLocaleOptions();
-    console.log(localeOptions);
     const changeLocale = useDispatchChangeLocale();
 
     const _onSelect_Theme = (key) => {
