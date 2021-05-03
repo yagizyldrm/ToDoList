@@ -5,6 +5,7 @@ const constantColors = {
     transparent: 'transparent',
     pink: '#ff9cf7',
     blue: '#189ad3', //seçtiğimiz mavi
+    purple: '#800080',
 
     greys: {
         1: '#383838',
@@ -40,6 +41,8 @@ export const colorNames = {
         paleButtonBackground: 'auth/paleButtonBackground',
         paleButtonText: 'auth/paleButtonText',
         appNameText: 'auth/appNameText',
+        appNameText: 'auth/appNameText',
+        appIcon: 'auth/appIcon',
     },
     todo: {
         background: 'todo/background',
@@ -63,7 +66,17 @@ export const colorNames = {
 
 export const darkColors = {
     // auth
-    [colorNames.auth.background]: constantColors.pink, // örnek
+    [colorNames.auth.background]: constantColors.blue, 
+    [colorNames.auth.paleButtonText]: constantColors.greys[1],
+    [colorNames.auth.appNameText]: constantColors.greys[1],
+    [colorNames.auth.inputPlaceholder]: toRGBA(constantColors.greys[1], 40),
+    [colorNames.auth.appIcon]: constantColors.greys[1],
+    [colorNames.auth.coloredButtonBackground]: constantColors.white,
+    [colorNames.auth.inputBorder]: constantColors.black,
+    [colorNames.auth.coloredButtonText]: constantColors.black,
+    [colorNames.auth.inputBackground]: toRGBA(constantColors.blue, 10),
+    [colorNames.auth.paleButtonBackground]: constantColors.transparent,
+    [colorNames.auth.inputText]: constantColors.white,
 
     //todo
     [colorNames.todo.background]: constantColors.black,
@@ -83,7 +96,18 @@ export const darkColors = {
 
 export const lightColors = {
     // auth
-    [colorNames.auth.background]: constantColors.pink, // örnek
+    [colorNames.auth.background]: constantColors.blue, 
+    [colorNames.auth.paleButtonText]: constantColors.black,
+    [colorNames.auth.appNameText]: constantColors.black,
+    [colorNames.auth.inputPlaceholder]: toRGBA(constantColors.black, 50),
+    [colorNames.auth.appIcon]: constantColors.purple,
+    [colorNames.auth.coloredButtonBackground]: constantColors.white,
+    [colorNames.auth.inputBorder]: constantColors.white, 
+    [colorNames.auth.coloredButtonText]: constantColors.purple,
+    [colorNames.auth.inputBackground]: toRGBA(constantColors.greys[2], 30),
+    [colorNames.auth.paleButtonBackground]: constantColors.transparent,
+    [colorNames.auth.inputText]: constantColors.black,
+
 
     //todo
     [colorNames.todo.background]: constantColors.white,

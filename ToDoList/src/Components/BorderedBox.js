@@ -9,6 +9,7 @@ const BorderedBox = (props) => {
         ...styles.container,
         backgroundColor: props.backgroundColor,
         height: props.tall ? styles.tallHeight.height : styles.normalHeight.height,
+        borderColor: props.borderColor,
     };
 
     return (

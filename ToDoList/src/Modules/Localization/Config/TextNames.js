@@ -10,9 +10,9 @@ export const texts = {
     turkish:"turkish",
     signOut:"signOut",
     toDoList:"toDoList",
-    signIn:"signIn",
     login:"login",
-    username:"username"
+    username:"username",
+    signUp:"signUp"
 };
 
 export const english={
@@ -28,8 +28,8 @@ export const english={
     [texts.dark]:"Dark Mode",
     [texts.light]:"Light Mode",
     [texts.signOut]:"Sign Out",
-    [texts.signIn]:"Sign In",
     [texts.username]:"Username",
+    [texts.signUp]:"Sign Up"
 };
 
 export const turkish ={
@@ -45,6 +45,6 @@ export const turkish ={
     [texts.dark]:"Siyah Tema",
     [texts.light]:"Beyaz Tema",
     [texts.signOut]:"Çıkış Yap",
-    [texts.signIn]:"Kayıt Ol",
     [texts.username]:"Kullanıcı Adı",
+    [texts.signUp]:"Kayıt Ol"
 };
