@@ -30,7 +30,7 @@ const ToDoNavigation = () => {
                     },
                     headerTitleAlign: 'center',
                     headerTitleStyle: {
-                        color: 'white',
+                        color: colors[colorNames.addNewNote.headerText],
                     },
                     headerRight: SettingsIcon,
                 }}
@@ -45,7 +45,7 @@ const ToDoNavigation = () => {
                     },
                     headerTitleAlign:"center",
                     headerTitleStyle:{
-                        color:colors[colorNames.addNewNote.text]
+                        color:colors[colorNames.addNewNote.headerText]
                     }
                 }}
             />
