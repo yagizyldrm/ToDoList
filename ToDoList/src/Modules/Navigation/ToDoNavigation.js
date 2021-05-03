@@ -2,10 +2,10 @@ import React from 'react';
 import { Text, TouchableOpacity, View, Button } from 'react-native';
 import { createStackNavigator, HeaderTitle } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/core';
-import SettingsScreen from "./Screens/SettingsScreen";
-import ToDoScreen from './Screens/ToDoScreen';
+import SettingsScreen from "../Settings/SettingsScreen";
+import ToDoScreen from '../ToDo/ToDoScreen';
 import AddNewNote from './Screens/AddNewNote';
-import SettingsIcon from './SettingsIcon';
+import SettingsIcon from '../Settings/SettingsIcon';
 
 import { texts, useLocalization } from "../Localization";
 import { colorNames, useThemedValues } from "../Theming";

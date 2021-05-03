@@ -1,14 +1,14 @@
 import React from 'react';
 import { TouchableOpacity, View  } from 'react-native';
 
-import { useThemedValues } from "../../Theming";
-import { useDispatchChangeLocale, useLocale,  useLocaleOptions, useLocalization } from "../../Localization";
+import { useThemedValues } from "../Theming";
+import { useDispatchChangeLocale, useLocale,  useLocaleOptions, useLocalization } from "../Localization";
 import { useNavigation } from '@react-navigation/core'; 
 
-import ToDoList from '../Components/ToDoList';
-import Icon from '../../../Components/Icon';
+import ToDoList from './ToDoList';
+import Icon from '../../Components/Icon';
 
-import { Svgs } from '../../../StylingConstants';
+import { Svgs } from '../../StylingConstants';
 
 import getStyles from './Styles/ToDoScreenStyles';
 
