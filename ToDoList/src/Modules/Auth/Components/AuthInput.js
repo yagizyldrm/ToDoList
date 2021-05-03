@@ -1,23 +1,26 @@
 import React, { useState } from 'react';
-import { SafeAreaView, TextInput, View } from 'react-native';
+import { TextInput, View } from 'react-native';
 import styles from '../styles/AuthInputStyles'
-
+import BorderedBox from '../../../Components/BorderedBox'
 
 const AuthInput = props => {
 
-    const [text, onChangeText] = useState("");
+  const [text, onChangeText] = useState("");
 
-    return (
-          <View style={styles.inputContainer}>
+  return (
+
+    <BorderedBox>
+      <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
           onChangeText={onChangeText}
           value={text}
           placeholder={props.placeholder}
         />
-        </View>
-    );
-  };
+      </View>
+    </BorderedBox>
+  );
+};
 
 export default AuthInput;
 
