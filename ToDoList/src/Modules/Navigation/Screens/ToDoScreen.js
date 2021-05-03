@@ -3,6 +3,7 @@ import React from 'react';
 import { Text, TouchableOpacity, View, Button, SafeAreaView } from 'react-native';
 
 import ToDoList from '../Components/ToDoList';
+import AddNewNote from '../Screens/AddNewNote';
 
 import styles from './Styles/ToDoScreenStyles';
 
@@ -20,8 +21,8 @@ const ToDoScreen = props => {
                     <ToDoList />
                 </View>
             </View> 
-            <TouchableOpacity style={styles.addButton}>
-                <View style={styles.iconContainer} onPress={() => navigation.navigate(ToDoList)}>
+            <TouchableOpacity style={styles.addButton} onPress={() => navigation.navigate('addnote-screen')}>
+                <View style={styles.iconContainer} >
                     <Icon iconStyle={styles.icon} svg={Svgs.PlusButton} />
                 </View>
             </TouchableOpacity>

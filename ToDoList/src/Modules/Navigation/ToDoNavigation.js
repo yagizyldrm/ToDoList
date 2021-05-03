@@ -4,6 +4,7 @@ import { createStackNavigator, HeaderTitle } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/core';
 import SettingsScreen from "./Screens/SettingsScreen";
 import ToDoScreen from './Screens/ToDoScreen';
+import AddNewNote from './Screens/AddNewNote';
 import SettingsIcon from './SettingsIcon';
 
 const ToDoStack = createStackNavigator();
@@ -40,6 +41,10 @@ const ToDoNavigation = () => {
                         color: 'white',
                     }
                 }}
+            />
+            <ToDoStack.Screen 
+                name="addnote-screen"
+                component={AddNewNote}
             />
         </ToDoStack.Navigator>
     );
