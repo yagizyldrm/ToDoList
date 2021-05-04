@@ -11,6 +11,7 @@ export default Colors => StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: Colors[colorNames.todo.background],
+        paddingBottom: Metrics.width*0.07,
     },
     addButton: {
         alignItems: 'center',
@@ -43,11 +44,42 @@ export default Colors => StyleSheet.create({
         marginLeft: 60,
     },
     todoBoxContainer: {
-        flex: 1,
-        backgroundColor: 'pink',
+        flex:1,
+        backgroundColor: Colors[colorNames.todo.background],
+        
     },
     flatListContainer: {
         flex:1,
         backgroundColor: 'yellow',
-    }
+    },
+    todoBox: {
+        flex:0.4,
+        backgroundColor:'white',
+        borderColor: Colors[colorNames.todo.addButton],
+        borderWidth:2,
+        borderRadius:10,
+        marginHorizontal:Metrics.width*0.05,
+        marginVertical:Metrics.width*0.02,
+        justifyContent:"flex-start",
+        alignItems:"center",
+        color:'black',
+        padding: 15,
+    },
+    checkIconContainer: {
+        width: Metrics.width * 0.055,
+        height: Metrics.width * 0.055,
+        aspectRatio: 1,
+        position: 'absolute',
+    },
+    checkIcon:{
+        color: 'grey',
+        justifyContent: 'flex-start',
+        alignItems: 'baseline',
+        borderRadius: 50,  
+
+    },
+    messageText:{
+        width: Metrics.width*0.58,
+        height: Metrics.width*0.14,
+    },
 });

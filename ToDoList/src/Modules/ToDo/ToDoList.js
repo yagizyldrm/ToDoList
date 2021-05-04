@@ -2,8 +2,10 @@ import React from 'react';
 import { FlatList, KeyboardAvoidingView, Text, Platform, SafeAreaView, TouchableOpacity, View } from 'react-native';
 import { Metrics } from '../../StylingConstants';
 import { useThemedValues } from '../Theming';
-import ToDoBox from './Components/ToDoBox';
 import DummyData from './DummyData';
+
+import Icon from '../../Components/Icon';
+import { Svgs } from '../../StylingConstants';
 
 import getStyles from './Styles/ToDoScreenStyles'
 
@@ -15,7 +17,12 @@ const ToDoList = props => {
     const _renderToDoItem = ({item , index}) => {
         console.log('rendertodoitem içi');
         return (
-            <Text>{item.message}</Text>
+            <View style={styles.todoBox}>
+                <TouchableOpacity style={styles.checkIconContainer} >
+                    <Icon iconStyle={styles.checkIcon} svg={Svgs.Checkbox} />
+                </TouchableOpacity>
+                <Text style={styles.messageText}>{item.message}</Text>
+            </View>
         )
     };
 
@@ -26,18 +33,17 @@ const ToDoList = props => {
             behavior={ Platform.OS === 'ios' ? 'padding' : null }
             keyboardVerticalOffset={ Metrics.navBarHeight * 1.6 }
             >
-                <TouchableOpacity style={styles.flatListContainer}>
+                <View style={styles.flatListContainer}>
                     <View style={styles.todoBoxContainer}>
                         <FlatList 
                             style={{flexGrow:0}}
-                            contentContainerStyle={{backgroundColor: 'pink'}}
                             data={DummyData}
                             renderItem={_renderToDoItem}
                             keyExtractor={(item) => item.id}
                             inverted
                         />
                     </View>
-                </TouchableOpacity>
+                </View>
             </KeyboardAvoidingView>
         </SafeAreaView>
     )
