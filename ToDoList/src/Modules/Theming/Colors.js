@@ -1,7 +1,7 @@
 // hex
 const constantColors = {
     white: '#FFFFFF',
-    black: '#000000',
+    black: '#2D2D2D',
     transparent: 'transparent',
     pink: '#ff9cf7',
     blue: '#189ad3', //seçtiğimiz mavi
@@ -55,12 +55,20 @@ export const colorNames = {
         background: 'settings/background',
         radioButtonSelected: 'settings/radioButtonSelected',
         radioButtonUnselected: 'settings/radioButtonUnselected',
-        signOutBorder:'settings/signOutBorder',
-        signOutButtonBackground:'settings/signOutButtonBackground',
-        signOutText:'settings/singOutText',
-        titleColor:'settings/titleColor',
-        username:"settings/username",
-        eMail:"settings/eMail",
+        signOutBorder: 'settings/signOutBorder',
+        signOutButtonBackground: 'settings/signOutButtonBackground',
+        signOutText: 'settings/singOutText',
+        titleColor: 'settings/titleColor',
+        username: "settings/username",
+        eMail: "settings/eMail",
+    },
+    addNewNote: {
+        border: "addNewNote/border",
+        background: "addNewNote/background",
+        todayText: "addNewNote/todayText",
+        text:"addNewNote/text",
+        headerText:"addNewNote/headerText",
+        textInputs:"addNewNote/textInputs",
     },
 };
 
@@ -90,8 +98,15 @@ export const darkColors = {
     [colorNames.settings.signOutText]: constantColors.white,
     [colorNames.settings.titleColor]: constantColors.blue,
     [colorNames.settings.signOutButtonBackground]: constantColors.black,
-    [colorNames.settings.eMail]:constantColors.white,
-    [colorNames.settings.username]:constantColors.white,
+    [colorNames.settings.eMail]: constantColors.white,
+    [colorNames.settings.username]: constantColors.white,
+    //addNewNote
+    [colorNames.addNewNote.background]: constantColors.black,
+    [colorNames.addNewNote.border]: constantColors.blue,
+    [colorNames.addNewNote.text]: constantColors.white,
+    [colorNames.addNewNote.todayText]: constantColors.white,
+    [colorNames.addNewNote.headerText]: constantColors.white,
+    [colorNames.addNewNote.textInputs]: constantColors.white,
 };
 
 export const lightColors = {
@@ -122,5 +137,13 @@ export const lightColors = {
     [colorNames.settings.signOutButtonBackground]: constantColors.white,
     [colorNames.settings.titleColor]: constantColors.blue,
     [colorNames.settings.username]: constantColors.black,
-    [colorNames.settings.eMail]:constantColors.black,
+    [colorNames.settings.eMail]: constantColors.black,
+
+    //addNewNote
+    [colorNames.addNewNote.background]: constantColors.white,
+    [colorNames.addNewNote.border]: constantColors.blue,
+    [colorNames.addNewNote.text]: constantColors.black,
+    [colorNames.addNewNote.todayText]: constantColors.blue,
+    [colorNames.addNewNote.headerText]: constantColors.white,
+    [colorNames.addNewNote.textInputs]: toRGBA(constantColors.greys[1], 80)
 };

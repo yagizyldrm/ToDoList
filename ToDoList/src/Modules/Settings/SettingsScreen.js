@@ -1,8 +1,8 @@
 import React from "react";
 import { View, Text, SafeAreaView, TouchableOpacity } from "react-native";
-import { useDispatchChangeTheme,  useTheme,   useThemeOption,   useThemedValues } from "../../Theming";
-import { useDispatchChangeLocale, useLocale,  useLocaleOptions, useLocalization, texts } from "../../Localization";
-import OptionsMenu from "../Components/OptionsMenu";
+import { useDispatchChangeTheme,  useTheme,   useThemeOption,   useThemedValues } from "../Theming";
+import { useDispatchChangeLocale, useLocale,  useLocaleOptions, useLocalization, texts } from "../Localization";
+import OptionsMenu from "../Navigation/Components/OptionsMenu";
 
 
 import getStyles from "./Styles/SettingsScreenStyles";

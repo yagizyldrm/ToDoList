@@ -12,7 +12,15 @@ export const texts = {
     toDoList:"toDoList",
     login:"login",
     username:"username",
-    signUp:"signUp"
+    signUp:"signUp",
+    taskname:"taskname",
+    endDate:"endDate",
+    time:"time",
+    today:"today",
+    noteDetails:"explanation",
+    add:"add",
+    addNewNote:"addNewNote",
+
 };
 
 export const english={
@@ -29,7 +37,15 @@ export const english={
     [texts.light]:"Light Mode",
     [texts.signOut]:"Sign Out",
     [texts.username]:"Username",
-    [texts.signUp]:"Sign Up"
+    [texts.signUp]:"Sign Up",
+    [texts.taskname]:"Task Name",
+    [texts.endDate]:"End Date",
+    [texts.time]:"Time",
+    [texts.today]:"Today",
+    [texts.noteDetails]:"Note Details",
+    [texts.add]:"Add",
+    [texts.addNewNote]:"Add New One"
+
 };
 
 export const turkish ={
@@ -46,5 +62,13 @@ export const turkish ={
     [texts.light]:"Beyaz Tema",
     [texts.signOut]:"Çıkış Yap",
     [texts.username]:"Kullanıcı Adı",
-    [texts.signUp]:"Kayıt Ol"
+    [texts.signUp]:"Kayıt Ol",
+    [texts.taskname]:"Görev Adı",
+    [texts.endDate]:"Bitiş Tarihi",
+    [texts.time]:"Saat",
+    [texts.today]:"Bugün",
+    [texts.noteDetails]:"Açıklama",
+    [texts.add]:"Ekle",
+    [texts.addNewNote]:"Yeni Not Ekle",
+
 };
