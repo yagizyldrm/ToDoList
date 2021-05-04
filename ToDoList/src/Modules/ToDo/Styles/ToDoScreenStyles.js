@@ -11,7 +11,7 @@ export default Colors => StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: Colors[colorNames.todo.background],
-        paddingBottom: Metrics.width*0.07,
+        paddingBottom: Metrics.width * 0.07,
     },
     addButton: {
         alignItems: 'center',
@@ -23,7 +23,7 @@ export default Colors => StyleSheet.create({
         flexDirection: 'column',
         marginTop: Metrics.width * 1.525,
         marginLeft: Metrics.width * 0.82,
-        
+
     },
     iconContainer: {
         width: Metrics.width * 0.146,
@@ -43,43 +43,53 @@ export default Colors => StyleSheet.create({
         alignItems: 'flex-end',
         marginLeft: 60,
     },
+    
+    // DummyData
+
     todoBoxContainer: {
-        flex:1,
+        flex: 1,
         backgroundColor: Colors[colorNames.todo.background],
-        
+
     },
     flatListContainer: {
-        flex:1,
+        flex: 1,
         backgroundColor: 'yellow',
     },
     todoBox: {
-        flex:0.4,
-        backgroundColor:'white',
+        flex: 0.4,
+        backgroundColor: Colors[colorNames.todo.background],
         borderColor: Colors[colorNames.todo.addButton],
-        borderWidth:2,
-        borderRadius:10,
-        marginHorizontal:Metrics.width*0.05,
-        marginVertical:Metrics.width*0.02,
-        justifyContent:"flex-start",
-        alignItems:"center",
-        color:'black',
+        borderWidth: 2,
+        borderRadius: 10,
+        marginHorizontal: Metrics.width * 0.05,
+        marginVertical: Metrics.width * 0.02,
+        alignItems: "center",
         padding: 15,
+        flexDirection: 'row',
     },
     checkIconContainer: {
         width: Metrics.width * 0.055,
         height: Metrics.width * 0.055,
         aspectRatio: 1,
-        position: 'absolute',
+        position: 'relative',
     },
-    checkIcon:{
+    checkIcon: {
         color: 'grey',
-        justifyContent: 'flex-start',
         alignItems: 'baseline',
-        borderRadius: 50,  
+        borderRadius: 50,
+        
 
     },
-    messageText:{
-        width: Metrics.width*0.58,
-        height: Metrics.width*0.14,
+    titleContainer: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginLeft: 15,
+        marginTop: 10,
+    },
+    messageText: {
+        width: Metrics.width * 0.58,
+        height: Metrics.width * 0.14,
+        color: Colors[colorNames.todo.todoBoxText],
+
     },
 });

@@ -21,7 +21,9 @@ const ToDoList = props => {
                 <TouchableOpacity style={styles.checkIconContainer} >
                     <Icon iconStyle={styles.checkIcon} svg={Svgs.Checkbox} />
                 </TouchableOpacity>
-                <Text style={styles.messageText}>{item.message}</Text>
+                <TouchableOpacity style={styles.titleContainer}>
+                    <Text style={styles.messageText}>{item.message}</Text>
+                </TouchableOpacity>
             </View>
         )
     };
