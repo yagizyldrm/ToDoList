@@ -4,6 +4,10 @@ import { Metrics } from '../../../StylingConstants';
 
 export default Colors => StyleSheet.create({
 
+    safeArea: {
+        flex: 1,
+        backgroundColor: 'lightblue',
+    },
     container: {
         flex: 1,
         backgroundColor: Colors[colorNames.todo.background],
@@ -39,6 +43,11 @@ export default Colors => StyleSheet.create({
         marginLeft: 60,
     },
     todoBoxContainer: {
-
+        flex: 1,
+        backgroundColor: 'pink',
     },
+    flatListContainer: {
+        flex:1,
+        backgroundColor: 'yellow',
+    }
 });

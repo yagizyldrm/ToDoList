@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, View  } from 'react-native';
+import { TouchableOpacity, View, Text  } from 'react-native';
 
 import { useThemedValues } from "../Theming";
 import { useDispatchChangeLocale, useLocale,  useLocaleOptions, useLocalization } from "../Localization";
@@ -30,9 +30,7 @@ const ToDoScreen = props => {
     return (
         <>
             <View style={styles.container}>
-                <View>
                     <ToDoList />
-                </View>
             </View> 
             <TouchableOpacity style={styles.addButton} onPress={() => navigation.navigate('addnote-screen')}>
                 <View style={styles.iconContainer} >

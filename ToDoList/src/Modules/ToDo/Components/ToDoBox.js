@@ -1,13 +1,15 @@
 import React from 'react';
-import { TextInput } from 'react-native';
+import { TextInput, View, Text } from 'react-native';
 import getStyles from '../Styles/ToDoBoxStyles';
 
 const ToDoBox = props => {
+  
+    console.log('todobox içi');
     
-    const {todotext} = props.todoData;
+    const {message} = props;
 
     return (
-        <TextInput>{props.todotext}</TextInput>
+        <Text>{message}</Text> 
     )
 };
 
