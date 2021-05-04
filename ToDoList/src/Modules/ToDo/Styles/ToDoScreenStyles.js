@@ -38,4 +38,7 @@ export default Colors => StyleSheet.create({
         alignItems: 'flex-end',
         marginLeft: 60,
     },
+    todoBoxContainer: {
+
+    },
 });
