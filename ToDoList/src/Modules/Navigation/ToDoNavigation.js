@@ -26,7 +26,7 @@ const ToDoNavigation = () => {
                 options={{
                     title: loc.t(texts.toDoList),
                     headerStyle: {
-                        backgroundColor: '#189ad3',
+                        backgroundColor: colors[colorNames.todo.headerBlue],
                     },
                     headerTitleAlign: 'center',
                     headerTitleStyle: {
