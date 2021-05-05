@@ -6,7 +6,6 @@ import { useThemedValues, colorNames } from '../../Theming';
 
 const AuthInput = props => {
 
-  const [text, onChangeText] = useState("");
   const {styles, colors} = useThemedValues(getStyles);
 
   return (
@@ -14,10 +13,14 @@ const AuthInput = props => {
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
-          onChangeText={onChangeText}
-          value={text}
+          onChangeText={props.onChangeText}
+          value={props.value}
           placeholder={props.placeholder}
           placeholderTextColor={colors[colorNames.auth.inputPlaceholder]}
+          autoCapitalize={props.autoCapitalize}
+          secureTextEntry={props.secureTextEntry}
+          value={props.value}
+          autoCorrect={false}
         />
       </View>
     </BorderedBox>

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, SafeAreaView, KeyboardAvoidingView, TouchableOpacity, Keyboard, Image } from 'react-native';
 import getStyles from '../styles/AuthScreenStyles';
-import { Images } from '../../../StylingConstants/';
 import AuthInput from '../Components/AuthInput';
 import AuthButton from '../Components/AuthButton';
 import Icon from '../../../Components/Icon';
@@ -9,7 +8,7 @@ import { Svgs } from '../../../StylingConstants';
 import { useThemedStyles } from '../../Theming';
 import { useLocale, useLocalization, texts } from '../../Localization';
 
-const AuthScreen = () => {
+const AuthScreen = props => {
 
     const [isLogin, setIsLogin] = useState(true);
 
@@ -45,22 +44,32 @@ const AuthScreen = () => {
                                 :
                                 <View style={styles.inputContainer}>
                                     <AuthInput
-                                        placeholder={loc.t(texts.username)} />
+                                        placeholder={loc.t(texts.username)}
+                                        value={props.nameValue}
+                                        onChangeText={props.onChangeText_Name}
+                                        autoCapitalize={'words'} />
                                 </View>
                         }
                         <View style={styles.inputContainer}>
                             <AuthInput
-                                placeholder={loc.t(texts.eMail)} />
+                                placeholder={loc.t(texts.eMail)}
+                                value={props.emailValue}
+                                onChangeText={props.onChangeText_Email}
+                                autoCapitalize={'none'} />
                         </View>
                         <View style={styles.inputContainer}>
                             <AuthInput
                                 placeholder={loc.t(texts.password)}
+                                value={props.passwordValue}
+                                onChangeText={props.onChangeText_Password}
+                                autoCapitalize={'none'}
+                                secureTextEntry={true}
                             />
                         </View>
                     </View>
                     <View style={styles.buttonsContainer}>
                         <AuthButton
-                            onPress={isLogin ? () => { } : () => { }}
+                            onPress={isLogin ? props.onPress_SignIn : props.onPress_SignUp}
                             disabled={false}
                             text={isLogin ? loginUppercase : signupUppercase} />
                         <TouchableOpacity style={styles.signupTouchable} onPress={() => setIsLogin(!isLogin)}>

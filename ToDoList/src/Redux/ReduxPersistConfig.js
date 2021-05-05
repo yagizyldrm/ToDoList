@@ -1,4 +1,5 @@
 import AsyncStorage from '@react-native-community/async-storage';
+import { USER_NAMESPACE } from '../Modules/Auth';
 
 // More info here:  https://shift.infinite.red/shipping-persistant-reducers-7341691232b1
 const REDUX_PERSIST = {
@@ -11,7 +12,8 @@ const REDUX_PERSIST = {
     // Optionally, just specify the keys you DO want stored to persistence.
     // An empty array means 'don't store any reducers' -> infinitered/ignite#409
     whitelist: [
-      'theming'
+      'theming',
+      USER_NAMESPACE
     ],
   },
 };
