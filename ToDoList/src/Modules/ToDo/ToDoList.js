@@ -13,36 +13,65 @@ import { useNavigation } from '@react-navigation/core';
 const ToDoList = props => {
     console.log('todolist içi');
     const navigation = useNavigation();
-    
+
     const { styles } = useThemedValues(getStyles);
 
-    const _renderToDoItem = ({item , index}) => {
+    const _renderToDoItem = ({ item, index }) => {
         console.log('rendertodoitem içi');
         return (
-            <View style={styles.todoBox}>
-                <TouchableOpacity style={styles.checkIconContainer} >
-                    <Icon iconStyle={styles.checkIcon} svg={Svgs.Checkbox} />
+
+            <>
+                <View style={styles.todoBox}>
+                    <TouchableOpacity style={styles.checkIconContainer} >
+                        <Icon iconStyle={styles.checkIcon} svg={Svgs.Checkbox} />
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.titleContainer} onPress={() => navigation.navigate("addnote-screen")} >
+                        <Text style={styles.messageText}>{item.message}</Text>
+                    </TouchableOpacity>
+                </View>
+            </>
+        )
+    };
+
+    const _renderDoneItem = ({ item, index }) => {
+        console.log('renderDone içi');
+        return (
+            <View style={styles.doneBox}>
+                <TouchableOpacity style={styles.checkedIconContainer} >
+                    <Icon iconStyle={styles.checkedIcon} svg={Svgs.Checkedbox} />
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.titleContainer} onPress={()=>navigation.navigate("addnote-screen")} >
-                    <Text style={styles.messageText}>{item.message}</Text>
+                <TouchableOpacity style={styles.doneTitleContainer}>
+                    <Text style={styles.doneMessageText}>{item.message}</Text>
                 </TouchableOpacity>
             </View>
         )
-    };
+    }
 
     return (
         <SafeAreaView style={styles.safeArea}>
             <KeyboardAvoidingView
-            style={{ flex:1 }}
-            behavior={ Platform.OS === 'ios' ? 'padding' : null }
-            keyboardVerticalOffset={ Metrics.navBarHeight * 1.6 }
+                style={{ flex: 1 }}
+                behavior={Platform.OS === 'ios' ? 'padding' : null}
+                keyboardVerticalOffset={Metrics.navBarHeight * 1.6}
             >
                 <View style={styles.flatListContainer}>
                     <View style={styles.todoBoxContainer}>
-                        <FlatList 
-                            style={{flexGrow:0}}
+                        <FlatList
+                            style={{ flexGrow: 0 }}
                             data={DummyData}
                             renderItem={_renderToDoItem}
+                            keyExtractor={(item) => item.id}
+                            inverted
+                        />
+                    </View>
+                </View>
+                <View><Text>Tamamlananlar</Text></View>
+                <View style={styles.flatListContainer}>
+                    <View style={styles.todoBoxContainer}>
+                        <FlatList
+                            style={{ flexGrow: 0 }}
+                            data={DummyData}
+                            renderItem={_renderDoneItem}
                             keyExtractor={(item) => item.id}
                             inverted
                         />

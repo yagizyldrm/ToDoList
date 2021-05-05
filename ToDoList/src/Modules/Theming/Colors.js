@@ -4,14 +4,16 @@ const constantColors = {
     black: '#2D2D2D',
     transparent: 'transparent',
     pink: '#ff9cf7',
-    blue: '#189ad3', //seçtiğimiz mavi
+    blue: '#189ad3', // main blue
     purple: '#800080',
+    darkblack: 'black',
 
     greys: {
         1: '#383838',
         2: '#ACACAC',
         3: '#868686',
         4: '#BCBCBC',
+        5: '#E0E0E0', //checkbox border color
     },
 };
 
@@ -50,6 +52,8 @@ export const colorNames = {
         contentBorder: 'todo/contentBorder',
         checkBoxColor: 'todo/checkBoxColor',
         addButton: 'todo/addButton',
+        todoBoxText: 'todo/todoBoxText',
+        checkBoxBorder: 'todo/checkBoxBorder',
     },
     settings: {
         background: 'settings/background',
@@ -92,6 +96,7 @@ export const darkColors = {
     [colorNames.todo.background]: constantColors.black,
     [colorNames.todo.addButton]: constantColors.blue,
     [colorNames.todo.todoBoxText]: constantColors.white,
+    [colorNames.todo.checkBoxBorder]: constantColors.greys[5],
 
     //settings
     [colorNames.settings.background]: constantColors.black,
@@ -131,7 +136,8 @@ export const lightColors = {
     //todo
     [colorNames.todo.background]: constantColors.white,
     [colorNames.todo.addButton]: constantColors.blue,
-    [colorNames.todo.todoBoxText]: constantColors.black,
+    [colorNames.todo.todoBoxText]: constantColors.darkblack,
+    [colorNames.todo.checkBoxBorder]: constantColors.greys[5],
 
 
     //settings

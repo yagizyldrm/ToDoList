@@ -55,8 +55,10 @@ export default Colors => StyleSheet.create({
         flex: 1,
         backgroundColor: 'yellow',
     },
+
+    // Todo Box
     todoBox: {
-        flex: 0.4,
+        flex: 0.3,
         backgroundColor: Colors[colorNames.todo.background],
         borderColor: Colors[colorNames.todo.addButton],
         borderWidth: 2,
@@ -67,6 +69,7 @@ export default Colors => StyleSheet.create({
         padding: 15,
         flexDirection: 'row',
     },
+
     checkIconContainer: {
         width: Metrics.width * 0.055,
         height: Metrics.width * 0.055,
@@ -74,12 +77,14 @@ export default Colors => StyleSheet.create({
         position: 'relative',
     },
     checkIcon: {
-        color: 'grey',
+        color: Colors[colorNames.todo.checkBoxBorder],
         alignItems: 'baseline',
         borderRadius: 50,
         
 
     },
+
+    // todo Text
     titleContainer: {
         justifyContent: 'center',
         alignItems: 'center',
@@ -90,6 +95,45 @@ export default Colors => StyleSheet.create({
         width: Metrics.width * 0.58,
         height: Metrics.width * 0.14,
         color: Colors[colorNames.todo.todoBoxText],
-
     },
+
+    // Done
+
+    doneBox: {
+        flex: 0.3,
+        backgroundColor: Colors[colorNames.todo.background],
+        borderColor: Colors[colorNames.todo.addButton],
+        borderWidth: 2,
+        borderRadius: 10,
+        marginHorizontal: Metrics.width * 0.05,
+        marginVertical: Metrics.width * 0.02,
+        alignItems: "center",
+        padding: 15,
+        flexDirection: 'row',
+    },
+    checkedIconContainer: {
+        width: Metrics.width * 0.055,
+        height: Metrics.width * 0.055,
+        aspectRatio: 1,
+        position: 'relative',
+    },
+    checkedIcon: {
+        color: Colors[colorNames.todo.checkBoxBorder],
+        alignItems: 'baseline',
+        borderRadius: 50,
+    },
+
+    // done text
+    doneTitleContainer: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginLeft: 15,
+        marginTop: 10,
+    },
+    doneMessageText: {
+        width: Metrics.width * 0.58,
+        height: Metrics.width * 0.14,
+        color: Colors[colorNames.todo.checkBoxBorder],
+    }
+
 });
