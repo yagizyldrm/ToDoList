@@ -130,6 +130,7 @@ export default Colors => StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: Colors[colorNames.todo.headerBlue],
+        marginBottom:5,
     },
     completedText: {
         fontFamily: Fonts.type.bold,
