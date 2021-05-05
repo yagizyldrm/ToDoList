@@ -6,7 +6,7 @@ export default Colors => StyleSheet.create({
 
     safeArea: {
         flex: 1,
-        backgroundColor: 'lightblue',
+        backgroundColor: Colors[colorNames.todo.headerBlue],
     },
     container: {
         flex: 1,
@@ -124,6 +124,7 @@ export default Colors => StyleSheet.create({
         borderRadius: 50,
     },
 
+    // tamamlanlar bandı
     completedTextContainer: {
         height: Metrics.width * 0.1,        
         justifyContent: 'center',
@@ -134,9 +135,10 @@ export default Colors => StyleSheet.create({
         fontSize: Fonts.size(16),
         justifyContent: 'center',
         alignItems: 'center',
+        color: Colors[colorNames.todo.completedText]
     },
 
-    // done text
+    // completed text
     doneTitleContainer: {
         justifyContent: 'center',
         alignItems: 'center',

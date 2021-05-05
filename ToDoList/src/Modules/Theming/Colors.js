@@ -7,6 +7,7 @@ const constantColors = {
     blue: '#189ad3', // main blue
     purple: '#800080',
     darkblack: 'black',
+    headerBlue: '#189ad3',
 
     greys: {
         1: '#383838',
@@ -54,6 +55,8 @@ export const colorNames = {
         addButton: 'todo/addButton',
         todoBoxText: 'todo/todoBoxText',
         checkBoxBorder: 'todo/checkBoxBorder',
+        headerBlue: 'todo/headerBlue',
+        completedText: 'todo/completedText'
     },
     settings: {
         background: 'settings/background',
@@ -97,6 +100,8 @@ export const darkColors = {
     [colorNames.todo.addButton]: constantColors.blue,
     [colorNames.todo.todoBoxText]: constantColors.white,
     [colorNames.todo.checkBoxBorder]: constantColors.greys[5],
+    [colorNames.todo.headerBlue]: constantColors.headerBlue,
+    [colorNames.todo.completedText]: constantColors.white,
 
     //settings
     [colorNames.settings.background]: constantColors.black,
@@ -138,6 +143,8 @@ export const lightColors = {
     [colorNames.todo.addButton]: constantColors.blue,
     [colorNames.todo.todoBoxText]: constantColors.darkblack,
     [colorNames.todo.checkBoxBorder]: constantColors.greys[5],
+    [colorNames.todo.headerBlue]: constantColors.headerBlue,
+    [colorNames.todo.completedText]: constantColors.white,
 
 
     //settings
