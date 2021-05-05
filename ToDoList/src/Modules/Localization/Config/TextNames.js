@@ -42,9 +42,9 @@ export const english={
     [texts.endDate]:"End Date",
     [texts.time]:"Time",
     [texts.today]:"Today",
-    [texts.noteDetails]:"Note Details",
+    [texts.noteDetails]:"Note Details...",
     [texts.add]:"Add",
-    [texts.addNewNote]:"Add New One"
+    [texts.addNewNote]:"Add New Note"
 
 };
 
@@ -67,7 +67,7 @@ export const turkish ={
     [texts.endDate]:"Bitiş Tarihi",
     [texts.time]:"Saat",
     [texts.today]:"Bugün",
-    [texts.noteDetails]:"Açıklama",
+    [texts.noteDetails]:"Açıklama...",
     [texts.add]:"Ekle",
     [texts.addNewNote]:"Yeni Not Ekle",
 

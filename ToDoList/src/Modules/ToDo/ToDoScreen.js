@@ -11,9 +11,12 @@ import Icon from '../../Components/Icon';
 import { Svgs } from '../../StylingConstants';
 
 import getStyles from './Styles/ToDoScreenStyles';
+import { getData } from './API/Firebase';
 
 
 const ToDoScreen = props => {
+
+    getData() //firebase realtime database
 
     // Theming
     const { styles, colors } = useThemedValues(getStyles);

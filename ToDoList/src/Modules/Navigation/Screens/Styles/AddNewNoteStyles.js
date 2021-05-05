@@ -21,6 +21,7 @@ export default Colors => StyleSheet.create({
         justifyContent:"flex-start",
         alignItems:"center",
         color:Colors[colorNames.addNewNote.text],
+        paddingLeft:10,
         
     },
     endDateInput:{
@@ -32,6 +33,7 @@ export default Colors => StyleSheet.create({
         borderRadius:10,
         borderColor:Colors[colorNames.addNewNote.border],
         alignItems:"center",
+        paddingLeft:10,
     },
     timeInput:{
         flex:0.08,
@@ -42,21 +44,28 @@ export default Colors => StyleSheet.create({
         borderWidth:2,
         borderRadius:10,
         alignItems:"center",
+        paddingLeft:10,
     },
     noteDetailsInput:{
         flexGrow:1,
         flexShrink:1,
+        height:Metrics.width*0.9,
         backgroundColor:Colors[colorNames.addNewNote.background],
         borderColor:Colors[colorNames.addNewNote.border],
         marginTop:Metrics.width*0.07,
         borderRadius:10,
         borderWidth:2,
         marginHorizontal:Metrics.width*0.05,
-        alignItems:"flex-start",
+        alignItems:"center",
+        paddingLeft:10,
     },
     addDetailsText:{
         position:"absolute",
     },
+    //addButtonContainer:{
+       // backgroundColor:"yellow",
+       // maxHeight:Metrics.width*0.3
+    //},
     addButton:{
         marginHorizontal:Metrics.width*0.05,
         height:Metrics.width*0.13,

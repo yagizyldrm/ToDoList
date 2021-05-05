@@ -61,6 +61,7 @@ export const colorNames = {
         titleColor: 'settings/titleColor',
         username: "settings/username",
         eMail: "settings/eMail",
+        tintColor:"settings/tintColor"
     },
     addNewNote: {
         border: "addNewNote/border",
@@ -68,8 +69,9 @@ export const colorNames = {
         todayText: "addNewNote/todayText",
         text:"addNewNote/text",
         headerText:"addNewNote/headerText",
-        textInputs:"addNewNote/textInputs",
+        placeHolderText:"addNewNote/placeHolderText",
     },
+    
 };
 
 export const darkColors = {
@@ -101,13 +103,14 @@ export const darkColors = {
     [colorNames.settings.signOutButtonBackground]: constantColors.black,
     [colorNames.settings.eMail]: constantColors.white,
     [colorNames.settings.username]: constantColors.white,
+    [colorNames.settings.tintColor]: constantColors.white,
     //addNewNote
     [colorNames.addNewNote.background]: constantColors.black,
     [colorNames.addNewNote.border]: constantColors.blue,
     [colorNames.addNewNote.text]: constantColors.white,
     [colorNames.addNewNote.todayText]: constantColors.white,
     [colorNames.addNewNote.headerText]: constantColors.white,
-    [colorNames.addNewNote.textInputs]: constantColors.white,
+    [colorNames.addNewNote.placeHolderText]: toRGBA(constantColors.white,60),
 };
 
 export const lightColors = {
@@ -122,7 +125,7 @@ export const lightColors = {
     [colorNames.auth.coloredButtonText]: constantColors.purple,
     [colorNames.auth.inputBackground]: toRGBA(constantColors.greys[2], 30),
     [colorNames.auth.paleButtonBackground]: constantColors.transparent,
-    [colorNames.auth.inputText]: constantColors.black,
+    [colorNames.auth.inputText]: constantColors.white,
 
 
     //todo
@@ -141,6 +144,7 @@ export const lightColors = {
     [colorNames.settings.titleColor]: constantColors.blue,
     [colorNames.settings.username]: constantColors.black,
     [colorNames.settings.eMail]: constantColors.black,
+    [colorNames.settings.tintColor]: constantColors.white,
 
     //addNewNote
     [colorNames.addNewNote.background]: constantColors.white,
@@ -148,5 +152,5 @@ export const lightColors = {
     [colorNames.addNewNote.text]: constantColors.black,
     [colorNames.addNewNote.todayText]: constantColors.blue,
     [colorNames.addNewNote.headerText]: constantColors.white,
-    [colorNames.addNewNote.textInputs]: toRGBA(constantColors.greys[1], 80)
+    [colorNames.addNewNote.placeHolderText]: toRGBA(constantColors.greys[2], 80),
 };
