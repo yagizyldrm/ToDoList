@@ -89,6 +89,7 @@ export const darkColors = {
     //todo
     [colorNames.todo.background]: constantColors.black,
     [colorNames.todo.addButton]: constantColors.blue,
+    [colorNames.todo.todoBoxText]: constantColors.white,
 
     //settings
     [colorNames.settings.background]: constantColors.black,
@@ -127,6 +128,8 @@ export const lightColors = {
     //todo
     [colorNames.todo.background]: constantColors.white,
     [colorNames.todo.addButton]: constantColors.blue,
+    [colorNames.todo.todoBoxText]: constantColors.black,
+
 
     //settings
     [colorNames.settings.background]: constantColors.white,

@@ -7,6 +7,7 @@ import Plus from '../Assets/Svgs/plus.svg';
 import PlusButton from '../Assets/Svgs/plusButton.svg';
 import  RadioSelected  from "../Assets/Svgs/RadioSelected";
 import  RadioUnselected  from "../Assets/Svgs/RadioUnselected";
+import Checkbox from '../Assets/Svgs/checkbox.svg'
 
 // Exports
 export default {
@@ -16,5 +17,6 @@ export default {
     PlusButton,
     RadioSelected,
     RadioUnselected,
+    Checkbox,
 }
 
