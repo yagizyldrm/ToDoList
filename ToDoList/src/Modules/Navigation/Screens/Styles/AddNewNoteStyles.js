@@ -46,6 +46,7 @@ export default Colors => StyleSheet.create({
     noteDetailsInput:{
         flexGrow:1,
         flexShrink:1,
+        height:Metrics.width*0.9,
         backgroundColor:Colors[colorNames.addNewNote.background],
         borderColor:Colors[colorNames.addNewNote.border],
         marginTop:Metrics.width*0.07,
@@ -57,6 +58,10 @@ export default Colors => StyleSheet.create({
     addDetailsText:{
         position:"absolute",
     },
+    //addButtonContainer:{
+       // backgroundColor:"yellow",
+       // maxHeight:Metrics.width*0.3
+    //},
     addButton:{
         marginHorizontal:Metrics.width*0.05,
         height:Metrics.width*0.13,

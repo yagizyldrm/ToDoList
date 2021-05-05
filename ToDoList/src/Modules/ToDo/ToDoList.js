@@ -8,10 +8,12 @@ import Icon from '../../Components/Icon';
 import { Svgs } from '../../StylingConstants';
 
 import getStyles from './Styles/ToDoScreenStyles'
+import { useNavigation } from '@react-navigation/core';
 
 const ToDoList = props => {
     console.log('todolist içi');
-
+    const navigation = useNavigation();
+    
     const { styles } = useThemedValues(getStyles);
 
     const _renderToDoItem = ({item , index}) => {
@@ -21,7 +23,7 @@ const ToDoList = props => {
                 <TouchableOpacity style={styles.checkIconContainer} >
                     <Icon iconStyle={styles.checkIcon} svg={Svgs.Checkbox} />
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.titleContainer}>
+                <TouchableOpacity style={styles.titleContainer} onPress={()=>navigation.navigate("addnote-screen")} >
                     <Text style={styles.messageText}>{item.message}</Text>
                 </TouchableOpacity>
             </View>
