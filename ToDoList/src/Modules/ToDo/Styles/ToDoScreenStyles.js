@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 import { colorNames } from '../../Theming/Colors';
-import { Metrics } from '../../../StylingConstants';
+import { Fonts, Metrics } from '../../../StylingConstants';
 
 export default Colors => StyleSheet.create({
 
@@ -92,6 +92,7 @@ export default Colors => StyleSheet.create({
         marginTop: 10,
     },
     messageText: {
+        fontFamily: Fonts.type.regular,
         width: Metrics.width * 0.58,
         height: Metrics.width * 0.14,
         color: Colors[colorNames.todo.todoBoxText],
@@ -123,6 +124,18 @@ export default Colors => StyleSheet.create({
         borderRadius: 50,
     },
 
+    completedTextContainer: {
+        height: Metrics.width * 0.1,        
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    completedText: {
+        fontFamily: Fonts.type.bold,
+        fontSize: Fonts.size(16),
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
     // done text
     doneTitleContainer: {
         justifyContent: 'center',
@@ -131,6 +144,7 @@ export default Colors => StyleSheet.create({
         marginTop: 10,
     },
     doneMessageText: {
+        fontFamily: Fonts.type.regular,
         width: Metrics.width * 0.58,
         height: Metrics.width * 0.14,
         color: Colors[colorNames.todo.checkBoxBorder],

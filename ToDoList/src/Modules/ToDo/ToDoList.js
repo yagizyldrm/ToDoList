@@ -9,16 +9,13 @@ import { Svgs } from '../../StylingConstants';
 
 import getStyles from './Styles/ToDoScreenStyles'
 import { useNavigation } from '@react-navigation/core';
-import { useLocale, useLocalization, useLocaleOptions, useDispatchChangeLocale, texts } from '../Localization';
+import { useLocalization, texts } from '../Localization';
 
 const ToDoList = props => {
     console.log('todolist içi');
     const navigation = useNavigation();
 
-    const currentLocale = useLocale();
     const loc = useLocalization();
-    const localeOptions = useLocaleOptions();
-    const changeLocale = useDispatchChangeLocale();
 
     const { styles } = useThemedValues(getStyles);
 
@@ -71,7 +68,11 @@ const ToDoList = props => {
                         />
                     </View>
                 </View>
-                <View><Text>{loc.t(texts.completed)}</Text></View>
+                <View style={styles.completedTextContainer}>
+                    <Text style={styles.completedText}>
+                        {loc.t(texts.completed)}
+                    </Text>
+                </View>
                 <View style={styles.flatListContainer}>
                     <View style={styles.todoBoxContainer}>
                         <FlatList
