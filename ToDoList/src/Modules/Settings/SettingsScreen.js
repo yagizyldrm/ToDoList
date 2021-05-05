@@ -1,11 +1,14 @@
 import React from "react";
 import { View, Text, SafeAreaView, TouchableOpacity } from "react-native";
+import { useSelector } from "react-redux"
+import { userSelector } from "../Auth/Redux/UserRedux"
 import { useDispatchChangeTheme,  useTheme,   useThemeOption,   useThemedValues } from "../Theming";
 import { useDispatchChangeLocale, useLocale,  useLocaleOptions, useLocalization, texts } from "../Localization";
 import OptionsMenu from "../Navigation/Components/OptionsMenu";
 
 
 import getStyles from "./Styles/SettingsScreenStyles";
+import { userReducer } from "../Auth";
 
 
 const SettingsScreen = props => {
@@ -27,15 +30,16 @@ const SettingsScreen = props => {
         changeLocale(key);
     }
 
+    const user = useSelector(userSelector);
 
     return (
         <View style={styles.container}>
             <SafeAreaView style={{flex:1}}>
                 <Text style={styles.text1}>
-                    Yağız Yıldırım
+                    {user.displayName}
                 </Text>
                 <Text style={styles.text2}>
-                    yagizyildirim@yandex.com
+                    {user.email}
                 </Text>
                 <View style={styles.optionContainer}>
                     <OptionsMenu
