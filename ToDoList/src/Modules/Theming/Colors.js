@@ -61,6 +61,7 @@ export const colorNames = {
         titleColor: 'settings/titleColor',
         username: "settings/username",
         eMail: "settings/eMail",
+        tintColor:"settings/tintColor"
     },
     addNewNote: {
         border: "addNewNote/border",
@@ -70,6 +71,7 @@ export const colorNames = {
         headerText:"addNewNote/headerText",
         textInputs:"addNewNote/textInputs",
     },
+    
 };
 
 export const darkColors = {
@@ -101,6 +103,7 @@ export const darkColors = {
     [colorNames.settings.signOutButtonBackground]: constantColors.black,
     [colorNames.settings.eMail]: constantColors.white,
     [colorNames.settings.username]: constantColors.white,
+    [colorNames.settings.tintColor]: constantColors.white,
     //addNewNote
     [colorNames.addNewNote.background]: constantColors.black,
     [colorNames.addNewNote.border]: constantColors.blue,
@@ -141,6 +144,7 @@ export const lightColors = {
     [colorNames.settings.titleColor]: constantColors.blue,
     [colorNames.settings.username]: constantColors.black,
     [colorNames.settings.eMail]: constantColors.black,
+    [colorNames.settings.tintColor]: constantColors.white,
 
     //addNewNote
     [colorNames.addNewNote.background]: constantColors.white,

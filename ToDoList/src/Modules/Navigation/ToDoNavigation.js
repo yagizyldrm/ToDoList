@@ -42,10 +42,13 @@ const ToDoNavigation = () => {
                     title:loc.t(texts.settings),
                     headerStyle:{
                         backgroundColor:colors[colorNames.addNewNote.border]
+                        
                     },
                     headerTitleAlign:"center",
+                    headerTintColor:colors[colorNames.settings.tintColor],
                     headerTitleStyle:{
                         color:colors[colorNames.addNewNote.headerText]
+                    
                     }
                 }}
             />
@@ -58,6 +61,7 @@ const ToDoNavigation = () => {
                         backgroundColor:colors[colorNames.addNewNote.border]
                     },
                     headerTitleAlign:"center",
+                    headerTintColor:colors[colorNames.settings.tintColor],
                     headerTitleStyle:{
                         color:colors[colorNames.addNewNote.headerText]
                     }
