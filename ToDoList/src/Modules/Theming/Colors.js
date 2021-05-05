@@ -69,7 +69,7 @@ export const colorNames = {
         todayText: "addNewNote/todayText",
         text:"addNewNote/text",
         headerText:"addNewNote/headerText",
-        textInputs:"addNewNote/textInputs",
+        placeHolderText:"addNewNote/placeHolderText",
     },
     
 };
@@ -110,7 +110,7 @@ export const darkColors = {
     [colorNames.addNewNote.text]: constantColors.white,
     [colorNames.addNewNote.todayText]: constantColors.white,
     [colorNames.addNewNote.headerText]: constantColors.white,
-    [colorNames.addNewNote.textInputs]: constantColors.white,
+    [colorNames.addNewNote.placeHolderText]: toRGBA(constantColors.white,60),
 };
 
 export const lightColors = {
@@ -125,7 +125,7 @@ export const lightColors = {
     [colorNames.auth.coloredButtonText]: constantColors.purple,
     [colorNames.auth.inputBackground]: toRGBA(constantColors.greys[2], 30),
     [colorNames.auth.paleButtonBackground]: constantColors.transparent,
-    [colorNames.auth.inputText]: constantColors.black,
+    [colorNames.auth.inputText]: constantColors.white,
 
 
     //todo
@@ -152,5 +152,5 @@ export const lightColors = {
     [colorNames.addNewNote.text]: constantColors.black,
     [colorNames.addNewNote.todayText]: constantColors.blue,
     [colorNames.addNewNote.headerText]: constantColors.white,
-    [colorNames.addNewNote.textInputs]: toRGBA(constantColors.greys[1], 80)
+    [colorNames.addNewNote.placeHolderText]: toRGBA(constantColors.greys[2], 80),
 };
