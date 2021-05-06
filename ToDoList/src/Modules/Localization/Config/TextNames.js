@@ -20,7 +20,8 @@ export const texts = {
     noteDetails:"explanation",
     add:"add",
     addNewNote:"addNewNote",
-    completed:"completed", 
+    completed:"completed",
+    edit:"edit",
 
 };
 
@@ -44,9 +45,10 @@ export const english={
     [texts.time]:"Time",
     [texts.today]:"Today",
     [texts.noteDetails]:"Note Details...",
-    [texts.add]:"Add",
+    [texts.add]:"ADD",
     [texts.addNewNote]:"Add New Note",
     [texts.completed]:"Completed",
+    [texts.edit]:"EDIT",
 
 };
 
@@ -70,8 +72,8 @@ export const turkish ={
     [texts.time]:"Saat",
     [texts.today]:"Bugün",
     [texts.noteDetails]:"Açıklama...",
-    [texts.add]:"Ekle",
+    [texts.add]:"EKLE",
     [texts.addNewNote]:"Yeni Not Ekle",
     [texts.completed]:"Tamamlananlar",
-
+    [texts.edit]:"DÜZENLE",
 };

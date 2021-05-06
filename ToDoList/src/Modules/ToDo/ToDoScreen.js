@@ -16,7 +16,7 @@ import { getData } from './API/Firebase';
 
 const ToDoScreen = props => {
 
-    getData() //firebase realtime database
+     //firebase realtime database
 
     // Theming
     const { styles, colors } = useThemedValues(getStyles);

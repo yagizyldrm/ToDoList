@@ -11,6 +11,7 @@ import { texts, useLocalization } from "../Localization";
 import { colorNames, useThemedValues } from "../Theming";
 
 import getStyles from "../Navigation/Screens/Styles/AddNewNoteStyles";
+import { Fonts } from '../../StylingConstants';
 
 const ToDoStack = createStackNavigator();
 
@@ -31,6 +32,7 @@ const ToDoNavigation = () => {
                     headerTitleAlign: 'center',
                     headerTitleStyle: {
                         color: colors[colorNames.addNewNote.headerText],
+                        fontFamily:Fonts.type.medium
                     },
                     headerRight: SettingsIcon,
                 }}
@@ -47,7 +49,8 @@ const ToDoNavigation = () => {
                     headerTitleAlign:"center",
                     headerTintColor:colors[colorNames.settings.tintColor],
                     headerTitleStyle:{
-                        color:colors[colorNames.addNewNote.headerText]
+                        color:colors[colorNames.addNewNote.headerText],
+                        fontFamily:Fonts.type.medium
                     
                     }
                 }}
@@ -63,7 +66,8 @@ const ToDoNavigation = () => {
                     headerTitleAlign:"center",
                     headerTintColor:colors[colorNames.settings.tintColor],
                     headerTitleStyle:{
-                        color:colors[colorNames.addNewNote.headerText]
+                        color:colors[colorNames.addNewNote.headerText],
+                        fontFamily:Fonts.type.medium
                     }
                 }}
             />

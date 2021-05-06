@@ -6,8 +6,9 @@ export default Colors =>  StyleSheet.create({
     menuTitle:{
         marginBottom:5,
         fontSize:25,
-        fontWeight:"bold",
+
         color:Colors[colorNames.settings.titleColor],
+        fontFamily:Fonts.type.bold,
     },
 
     optionTouchable:{
@@ -16,10 +17,12 @@ export default Colors =>  StyleSheet.create({
         marginLeft:5,
         color:Colors[colorNames.settings.signOutText],
         alignItems:"center" ,
+        fontFamily:Fonts.type.medium
     },
     optionText:{
         fontSize:20,   
-        alignItems:"center"
+        alignItems:"center",
+        fontFamily:Fonts.type.medium
     },
     iconContainer:{
         width:10,
@@ -32,6 +35,7 @@ export default Colors =>  StyleSheet.create({
         fontSize:20,
         marginLeft:5,
         color:Colors[colorNames.settings.signOutText],
+        fontFamily:Fonts.type.medium
     }
 })
 

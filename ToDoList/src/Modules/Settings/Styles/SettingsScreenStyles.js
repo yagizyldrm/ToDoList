@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { Fonts, Metrics } from "../../../StylingConstants";
 import { colorNames } from "../../Theming";
 
 export default Colors => StyleSheet.create({
@@ -10,15 +11,17 @@ export default Colors => StyleSheet.create({
         marginTop:20,
         marginBottom:3,
         fontSize:25,
-        fontWeight:"bold",
+
         marginLeft:10,
         color:Colors[colorNames.settings.username],
+        fontFamily:Fonts.type.bold,
     },
     text2:{
         fontSize:23,
-        fontWeight:"normal",
+
         marginLeft:10,
         color:Colors[colorNames.settings.eMail],
+        fontFamily:Fonts.type.medium,
     },
     optionContainer:{
         flex:0.5,
@@ -27,7 +30,6 @@ export default Colors => StyleSheet.create({
         flexGrow:1,
     },
     signOutTouchable:{
-        
         justifyContent:"center",
         alignItems:"center",
         borderWidth:3,
@@ -36,12 +38,14 @@ export default Colors => StyleSheet.create({
         height:60,
         marginBottom:10,
         marginHorizontal:20,
-        backgroundColor:Colors[colorNames.settings.signOutButtonBackground]
+        backgroundColor:Colors[colorNames.settings.signOutButtonBackground],
+        fontFamily:Fonts.type.medium,
     },
     toucableText:{
         color:Colors[colorNames.settings.signOutText],
         fontSize:20,
-        fontWeight:"bold",
+        fontFamily:Fonts.type.bold,
+        marginBottom:Metrics.width*0.02,
     },
 })
 

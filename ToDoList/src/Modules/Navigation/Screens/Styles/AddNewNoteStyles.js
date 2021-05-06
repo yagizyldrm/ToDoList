@@ -22,6 +22,7 @@ export default Colors => StyleSheet.create({
         alignItems:"center",
         color:Colors[colorNames.addNewNote.text],
         paddingLeft:10,
+        fontFamily:Fonts.type.medium,
         
     },
     endDateInput:{
@@ -34,6 +35,8 @@ export default Colors => StyleSheet.create({
         borderColor:Colors[colorNames.addNewNote.border],
         alignItems:"center",
         paddingLeft:10,
+        color:Colors[colorNames.addNewNote.text],
+        fontFamily:Fonts.type.medium,
     },
     timeInput:{
         flex:0.08,
@@ -45,6 +48,8 @@ export default Colors => StyleSheet.create({
         borderRadius:10,
         alignItems:"center",
         paddingLeft:10,
+        color:Colors[colorNames.addNewNote.text],
+        fontFamily:Fonts.type.medium,
     },
     noteDetailsInput:{
         flexGrow:1,
@@ -58,6 +63,8 @@ export default Colors => StyleSheet.create({
         marginHorizontal:Metrics.width*0.05,
         alignItems:"center",
         paddingLeft:10,
+        color:Colors[colorNames.addNewNote.text],
+        fontFamily:Fonts.type.medium,
     },
     addDetailsText:{
         position:"absolute",
@@ -78,6 +85,7 @@ export default Colors => StyleSheet.create({
         marginBottom:Metrics.width*0.05,
         justifyContent:"center",
         alignItems:"center",
+        fontFamily:Fonts.type.bold,
     },
 })
 
