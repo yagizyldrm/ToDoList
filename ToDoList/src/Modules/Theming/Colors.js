@@ -8,6 +8,7 @@ const constantColors = {
     purple: '#800080',
     darkblack: 'black',
     headerBlue: '#189ad3',
+    fadedBlue: '#71c7ec',
 
     greys: {
         1: '#383838',
@@ -56,7 +57,8 @@ export const colorNames = {
         todoBoxText: 'todo/todoBoxText',
         checkBoxBorder: 'todo/checkBoxBorder',
         headerBlue: 'todo/headerBlue',
-        completedText: 'todo/completedText'
+        completedText: 'todo/completedText',
+        doneBoxBorder: 'todo/doneBoxBorder',
     },
     settings: {
         background: 'settings/background',
@@ -102,6 +104,7 @@ export const darkColors = {
     [colorNames.todo.checkBoxBorder]: constantColors.greys[5],
     [colorNames.todo.headerBlue]: constantColors.headerBlue,
     [colorNames.todo.completedText]: constantColors.white,
+    [colorNames.todo.doneBoxBorder]: constantColors.fadedBlue,
 
     //settings
     [colorNames.settings.background]: constantColors.black,
@@ -145,6 +148,7 @@ export const lightColors = {
     [colorNames.todo.checkBoxBorder]: constantColors.greys[5],
     [colorNames.todo.headerBlue]: constantColors.headerBlue,
     [colorNames.todo.completedText]: constantColors.white,
+    [colorNames.todo.doneBoxBorder]: constantColors.fadedBlue,
 
 
     //settings

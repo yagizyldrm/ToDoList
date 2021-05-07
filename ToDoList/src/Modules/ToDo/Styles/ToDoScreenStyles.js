@@ -43,7 +43,7 @@ export default Colors => StyleSheet.create({
         alignItems: 'flex-end',
         marginLeft: 60,
     },
-    
+
     // DummyData
 
     todoBoxContainer: {
@@ -66,8 +66,10 @@ export default Colors => StyleSheet.create({
         marginHorizontal: Metrics.width * 0.05,
         marginVertical: Metrics.width * 0.02,
         alignItems: "center",
-        padding: 15,
         flexDirection: 'row',
+        paddingLeft: 15,
+        maxHeight: Metrics.width * 0.14,
+        minHeight: Metrics.width * 0.1,
     },
 
     checkIconContainer: {
@@ -80,7 +82,7 @@ export default Colors => StyleSheet.create({
         color: Colors[colorNames.todo.checkBoxBorder],
         alignItems: 'baseline',
         borderRadius: 50,
-        
+
 
     },
 
@@ -90,6 +92,7 @@ export default Colors => StyleSheet.create({
         alignItems: 'center',
         marginLeft: 15,
         marginTop: 10,
+        paddingTop: 45,
     },
     messageText: {
         fontFamily: Fonts.type.regular,
@@ -103,14 +106,16 @@ export default Colors => StyleSheet.create({
     doneBox: {
         flex: 0.3,
         backgroundColor: Colors[colorNames.todo.background],
-        borderColor: Colors[colorNames.todo.addButton],
+        borderColor: Colors[colorNames.todo.doneBoxBorder],
         borderWidth: 2,
         borderRadius: 10,
         marginHorizontal: Metrics.width * 0.05,
         marginVertical: Metrics.width * 0.02,
         alignItems: "center",
-        padding: 15,
         flexDirection: 'row',
+        paddingLeft: 15,
+        maxHeight: Metrics.width * 0.14,
+        minHeight: Metrics.width * 0.1,
     },
     checkedIconContainer: {
         width: Metrics.width * 0.055,
@@ -126,11 +131,11 @@ export default Colors => StyleSheet.create({
 
     // tamamlanlar bandı
     completedTextContainer: {
-        height: Metrics.width * 0.1,        
+        height: Metrics.width * 0.1,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: Colors[colorNames.todo.headerBlue],
-        marginBottom:5,
+        marginBottom: 5,
     },
     completedText: {
         fontFamily: Fonts.type.bold,
@@ -146,6 +151,7 @@ export default Colors => StyleSheet.create({
         alignItems: 'center',
         marginLeft: 15,
         marginTop: 10,
+        paddingTop: 45,
     },
     doneMessageText: {
         fontFamily: Fonts.type.regular,
