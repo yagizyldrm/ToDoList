@@ -12,21 +12,22 @@ const AddNewNote = props => {
     const[taskname, setTaskname]= useState("");
     const[endDate,setEndDate]= useState("");
     const[time,setTime] = useState("");
-    const[details,setDetails]=useState("");
+    const[noteDetails,setNoteDetails]=useState("");
     const[isComplated,setIsComplated]=useState(false);
 
     const _onPress_AddSaveNote = ()=>{
         const item ={
-            title: taskname,
+            key:itemKey,
+            taskname: taskname,
             endDate: endDate,
             time:time,
-            details:details,    
+            noteDetails:noteDetails,    
         };
         // _onPress_AddSaveNote'a basıldığında yukarıda oluşturulan (item'de) değerleri firebase'e aktarılmasını sağlayan kod.
         addNote(item);
     }
 
-    const itemKey= props.route.params=itemKey;
+    const itemKey= props.route.params?.itemKey;
 
     useEffect(()=>{
         props.navigation.setOptions({
@@ -42,24 +43,32 @@ const AddNewNote = props => {
         <SafeAreaView style={styles.mainContainer} >
         <ScrollView style={styles.mainContainer}>
         <TextInput 
+        value={taskname}
+        onChangeText={setTaskname}
         style={styles.taskNameInput} 
         placeholder={loc.t(texts.taskname)} 
         textAlignVertical="center" 
         placeholderTextColor={colors[colorNames.addNewNote.placeHolderText]}>
         </TextInput>
         <TextInput 
+        value={endDate}
+        onChangeText={setEndDate}
         style={styles.endDateInput} 
         placeholder={loc.t(texts.endDate)} 
         textAlignVertical="center" 
         placeholderTextColor={colors[colorNames.addNewNote.placeHolderText]}>
         </TextInput>
         <TextInput 
+        value={time}
+        onChangeText={setTime}
         style={styles.timeInput} 
         placeholder={loc.t(texts.time)} 
         textAlignVertical="center"  
         placeholderTextColor={colors[colorNames.addNewNote.placeHolderText]} >
         </TextInput>
         <TextInput 
+        value={noteDetails}
+        onChangeText={setNoteDetails}
         style={styles.noteDetailsInput} 
         placeholder={loc.t(texts.noteDetails)} 
         textAlign="left" 
