@@ -22,21 +22,17 @@ const ToDoList = props => {
     const _renderToDoItem = ({ item, index }) => {
         console.log('rendertodoitem içi');
         return (
-
-            <>
-                <View style={styles.todoBox}>
-                    <TouchableOpacity style={styles.checkIconContainer} >
-                        <Icon iconStyle={styles.checkIcon} svg={Svgs.Checkbox} />
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.titleContainer} onPress={() => navigation.navigate("addnote-screen")} >
-                        <Text style={styles.messageText}>{item.message}</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.deleteIconContainer} >
-                        <Icon iconStyle={styles.deleteIcon} svg={Svgs.DeleteIcon} />
-                    </TouchableOpacity>
-
-                </View>
-            </>
+            <View style={styles.todoBox}>
+                <TouchableOpacity style={styles.checkIconContainer} >
+                    <Icon iconStyle={styles.checkIcon} svg={Svgs.Checkbox} />
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.titleContainer} onPress={() => navigation.navigate("addnote-screen")} >
+                    <Text style={styles.messageText}>{item.message}</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.deleteIconContainer} >
+                    <Icon iconStyle={styles.deleteIcon} svg={Svgs.DeleteIcon} />
+                </TouchableOpacity>
+            </View>
         )
     };
 
@@ -77,7 +73,7 @@ const ToDoList = props => {
                         {loc.t(texts.completed)}
                     </Text>
                 </View>
-                <View style={styles.flatListContainer}>
+                <View style={styles.flatListDoneContainer}>
                     <View style={styles.todoBoxContainer}>
                         <FlatList
                             style={{ flexGrow: 0 }}

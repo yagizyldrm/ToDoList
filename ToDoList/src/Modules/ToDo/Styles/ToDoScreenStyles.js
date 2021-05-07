@@ -56,6 +56,13 @@ export default Colors => StyleSheet.create({
         backgroundColor: 'yellow',
     },
 
+    flatListDoneContainer: {
+        flexGrow: 1,
+        backgroundColor: 'yellow',
+        maxHeight: Metrics.width * 0.4,
+        minHeight: Metrics.width * 0.1
+    },
+
     // Todo Box
     todoBox: {
         flex: 0.3,
@@ -104,7 +111,6 @@ export default Colors => StyleSheet.create({
     // Done
 
     doneBox: {
-        flex: 0.3,
         backgroundColor: Colors[colorNames.todo.background],
         borderColor: Colors[colorNames.todo.doneBoxBorder],
         borderWidth: 2,
