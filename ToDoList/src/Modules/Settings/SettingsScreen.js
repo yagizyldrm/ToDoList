@@ -1,11 +1,11 @@
 import React from "react";
 import { View, Text, SafeAreaView, TouchableOpacity } from "react-native";
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { userSelector } from "../Auth/Redux/UserRedux"
 import { useDispatchChangeTheme,  useTheme,   useThemeOption,   useThemedValues } from "../Theming";
 import { useDispatchChangeLocale, useLocale,  useLocaleOptions, useLocalization, texts } from "../Localization";
 import OptionsMenu from "../Navigation/Components/OptionsMenu";
-
+import {signOutRequest} from "../Auth"
 
 import getStyles from "./Styles/SettingsScreenStyles";
 import { userReducer } from "../Auth";
@@ -28,6 +28,10 @@ const SettingsScreen = props => {
     }
     const _onSelect_Locale = (key) =>{
         changeLocale(key);
+    }
+    const dispatch = useDispatch();
+    const _onPress_SignOut = () => {
+        dispatch(signOutRequest());
     }
 
     const user = useSelector(userSelector);
@@ -56,7 +60,7 @@ const SettingsScreen = props => {
                     />
                     
                 </View>
-                <TouchableOpacity style={styles.signOutTouchable}>
+                <TouchableOpacity style={styles.signOutTouchable} onPress={_onPress_SignOut}>
                     <Text style={styles.toucableText}>{loc.t(texts.signOut)}</Text>
                 </TouchableOpacity>
 
