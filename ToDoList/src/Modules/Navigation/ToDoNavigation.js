@@ -6,6 +6,7 @@ import SettingsScreen from "../Settings/SettingsScreen";
 import ToDoScreen from '../ToDo/ToDoScreen';
 import AddNewNote from './Screens/AddNewNote';
 import SettingsIcon from '../Settings/SettingsIcon';
+import SideBarIcon from '../SideBarMenu/SideBarIcon';
 
 import { texts, useLocalization } from "../Localization";
 import { colorNames, useThemedValues } from "../Theming";
@@ -35,6 +36,7 @@ const ToDoNavigation = () => {
                         fontFamily:Fonts.type.medium
                     },
                     headerRight: SettingsIcon,
+                    headerLeft: SideBarIcon,
                 }}
             />
             <ToDoStack.Screen

@@ -9,6 +9,7 @@ import  RadioSelected  from "../Assets/Svgs/RadioSelected";
 import  RadioUnselected  from "../Assets/Svgs/RadioUnselected";
 import Checkbox from '../Assets/Svgs/checkbox.svg';
 import Checkedbox from '../Assets/Svgs/Checkedbox.svg';
+import MenuIcon from '../Assets/Svgs/menuicon.svg'
 
 // Exports
 export default {
@@ -20,5 +21,6 @@ export default {
     RadioUnselected,
     Checkbox,
     Checkedbox,
+    MenuIcon,
 }
 
