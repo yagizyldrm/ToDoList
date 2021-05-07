@@ -7,13 +7,6 @@ export const getData = () => {
         .on('value', snapshot => {
             console.log('Realtime database: ', snapshot.val());
         });
-    /*
-    //Reading data: One-time read
-    .once('value')
-    .then(snapshot => {
-      console.log('User data: ', snapshot.val());
-    });
-    */
 
     return [];
 }

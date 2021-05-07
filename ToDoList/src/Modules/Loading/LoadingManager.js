@@ -6,16 +6,12 @@ import { useSelector } from 'react-redux';
 import { isLoadingSelector } from './LoadingRedux';
 
 const styles = StyleSheet.create({
-    modal: {
-    },
+
     container: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center'
-    },
-    spinnerTextStyle: {
-        color: 'white',
-      },
+    }
 })
 
 const LoadingManager = props => {
@@ -23,16 +19,9 @@ const LoadingManager = props => {
     const isLoading = useSelector(isLoadingSelector);
 
     return (
-        <Modal
-            isVisible={isLoading}
-            style={styles.modal}
-        >
+        <Modal isVisible={isLoading}>
             <View style={styles.container}>
-                <ActivityIndicator 
-                visible={true}
-                textContent={'Loading...'}
-                textStyle={styles.spinnerTextStyle}
-                 />
+                <ActivityIndicator color='white' size="large" />
             </View>
         </Modal>
     )
