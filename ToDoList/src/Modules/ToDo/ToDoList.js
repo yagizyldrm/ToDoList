@@ -31,6 +31,10 @@ const ToDoList = props => {
                     <TouchableOpacity style={styles.titleContainer} onPress={() => navigation.navigate("addnote-screen")} >
                         <Text style={styles.messageText}>{item.message}</Text>
                     </TouchableOpacity>
+                    <TouchableOpacity style={styles.deleteIconContainer} >
+                        <Icon iconStyle={styles.deleteIcon} svg={Svgs.DeleteIcon} />
+                    </TouchableOpacity>
+
                 </View>
             </>
         )

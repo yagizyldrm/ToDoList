@@ -59,6 +59,7 @@ export const colorNames = {
         headerBlue: 'todo/headerBlue',
         completedText: 'todo/completedText',
         doneBoxBorder: 'todo/doneBoxBorder',
+        deleteButton: 'todo/deleteButton',
     },
     settings: {
         background: 'settings/background',
@@ -105,6 +106,7 @@ export const darkColors = {
     [colorNames.todo.headerBlue]: constantColors.headerBlue,
     [colorNames.todo.completedText]: constantColors.white,
     [colorNames.todo.doneBoxBorder]: constantColors.fadedBlue,
+    [colorNames.todo.deleteButton]: constantColors.blue,
 
     //settings
     [colorNames.settings.background]: constantColors.black,
@@ -149,6 +151,7 @@ export const lightColors = {
     [colorNames.todo.headerBlue]: constantColors.headerBlue,
     [colorNames.todo.completedText]: constantColors.white,
     [colorNames.todo.doneBoxBorder]: constantColors.fadedBlue,
+    [colorNames.todo.deleteButton]: constantColors.blue,
 
 
     //settings

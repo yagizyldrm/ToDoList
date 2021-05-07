@@ -158,6 +158,19 @@ export default Colors => StyleSheet.create({
         width: Metrics.width * 0.58,
         height: Metrics.width * 0.14,
         color: Colors[colorNames.todo.checkBoxBorder],
+    }, 
+
+    // DeleteIcon
+    deleteIconContainer: {
+        width: Metrics.width * 0.055,
+        height: Metrics.width * 0.055,
+        aspectRatio: 1,
+        position: 'relative',
+        marginLeft: Metrics.width * 0.1,
+
+    },
+    deleteIcon: {
+        color: Colors[colorNames.todo.deleteButton],
     }
 
 });
