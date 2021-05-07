@@ -7,6 +7,7 @@ import Icon from '../../../Components/Icon';
 import { Svgs } from '../../../StylingConstants';
 import { useThemedStyles } from '../../Theming';
 import { useLocale, useLocalization, texts } from '../../Localization';
+import { customUppercase } from '../../../Utils/LocaleUpperCase'
 
 const AuthScreen = props => {
 
@@ -16,8 +17,9 @@ const AuthScreen = props => {
     const loc = useLocalization();
 
     const locale = useLocale();
-    const loginUppercase = loc.t(texts.login).toLocaleUpperCase(locale);
-    const signupUppercase = loc.t(texts.signUp).toLocaleUpperCase(locale);
+    const loginUppercase = customUppercase(loc.t(texts.login), locale);
+    const signupUppercase = customUppercase(loc.t(texts.signUp), locale);
+
 
     return (
         <SafeAreaView style={styles.safeArea}>
