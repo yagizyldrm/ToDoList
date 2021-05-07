@@ -1,13 +1,14 @@
 import { fork, takeEvery, call, put, all } from "@redux-saga/core/effects";
 import { setUserAC, SIGN_IN_REQUEST, SIGN_OUT_REQUEST, SIGN_UP_REQUEST } from './UserRedux';
 import { getCurrentUser, signIn, signOut, signUp, updateUser } from '../API/Firebase';
+import { setIsLoadingAC } from "../../Loading/LoadingRedux";
 
 
 function* workerSignIn(action) {
     const {email, password} = action.payload;
 
     try {
-
+        yield put(setIsLoadingAC(true)); 
         yield call(signIn, email, password);
 
         const currentUser = getCurrentUser();
@@ -15,7 +16,9 @@ function* workerSignIn(action) {
 
     } catch (error) {
         console.log(error);
-    } 
+    } finally {
+        yield put(setIsLoadingAC(false));
+    }
 }
 
 function* watchSignInRequest() {
@@ -40,12 +43,14 @@ function* workerSignUp(action) {
     const { email, password, displayName } = action.payload;
 
     try {
-
+        yield put(setIsLoadingAC(true));
         yield call(signUpAndUpdateUser, email, password, displayName);
 
     } catch (error) {
         console.log(error);
-    } 
+    }finally {
+        yield put(setIsLoadingAC(false));
+    }
 }
 
 function* watchSignUpRequest() {
@@ -54,9 +59,12 @@ function* watchSignUpRequest() {
 
 function* workerSignOut() {
     try {
+        yield put(setIsLoadingAC(true));
 
         yield call(signOut);
         yield put(setUserAC(null));
+
+        yield put(setIsLoadingAC(false));
 
     } catch (error) {
         console.log('ERROR', error);
