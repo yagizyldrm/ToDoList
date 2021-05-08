@@ -4,7 +4,7 @@ import { useThemedValues, colorNames } from "../../Theming";
 import { texts, useLocalization } from "../../Localization"
 
 import getStyles from "./Styles/AddNewNoteStyles";
-import { addNote } from '../../ToDo/API/Firebase';
+import { addNote, getNoteDetail } from '../../ToDo/API/Firebase';
 import { Fonts } from '../../../StylingConstants';
 
 const AddNewNote = props => {
@@ -21,11 +21,31 @@ const AddNewNote = props => {
             taskname: taskname,
             endDate: endDate,
             time:time,
-            noteDetails:noteDetails,    
+            noteDetails:noteDetails, 
+            isComplated:false,   
         };
+
+        const onComplate = ()=>{
+            props.navigation.goBack();
+        }
+
         // _onPress_AddSaveNote'a basıldığında yukarıda oluşturulan (item'de) değerleri firebase'e aktarılmasını sağlayan kod.
-        addNote(item);
+        addNote(item, onComplate); 
     }
+    useEffect(()=>{
+        if(itemKey) {
+            getNoteDetail(itemKey, item =>{
+                setTaskname(item.taskname);
+                setEndDate(item.endDate);
+                setTime(item.time);
+                setNoteDetails(item.noteDetails);
+                setIsComplated(item.isComplated);
+
+            });
+        }
+        
+    }, []);
+    
 
     const itemKey= props.route.params?.itemKey;
 

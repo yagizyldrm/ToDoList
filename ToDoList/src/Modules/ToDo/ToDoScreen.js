@@ -30,12 +30,17 @@ const ToDoScreen = props => {
     // Navigation
     const navigation = useNavigation();
 
+    const _onPress_Add = () =>{
+        props.navigation.navigate("addnote-screen")
+    }
+    
+
     return (
         <>
             <View style={styles.container}>
                     <ToDoList />
             </View> 
-            <TouchableOpacity style={styles.addButton} onPress={() => navigation.navigate('addnote-screen')}>
+            <TouchableOpacity style={styles.addButton} onPress={_onPress_Add}>
                 <View style={styles.iconContainer} >
                     <Icon iconStyle={styles.icon} svg={Svgs.PlusButton} />
                 </View>

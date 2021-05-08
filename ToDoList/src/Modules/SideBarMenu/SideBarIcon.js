@@ -28,7 +28,7 @@ const SideBarIcon = props => {
     const navigation = useNavigation();
     return (
         <View style={styles.iconCon}>
-        <TouchableOpacity style={styles.iconContainer} onPress={() => navigation.navigate('null')}>
+        <TouchableOpacity style={styles.iconContainer}>
             <Icon iconStyle={styles.icon} svg={Svgs.MenuIcon} />
         </TouchableOpacity>
         </View>

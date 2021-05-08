@@ -26,7 +26,6 @@ const SettingsIcon = props => {
     const styles = useThemedStyles(getStyles);
 
     const navigation = useNavigation();
-    console.log('settingsIcon');
     return (
         <View style={styles.iconCon}>
         <TouchableOpacity style={styles.iconContainer} onPress={() => navigation.navigate('settings-screen')}>
