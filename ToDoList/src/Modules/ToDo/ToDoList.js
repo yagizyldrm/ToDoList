@@ -11,6 +11,7 @@ import getStyles from './Styles/ToDoScreenStyles';
 
 import { useLocalization, texts } from '../Localization';
 import { deleteItem, subscribeToNoteData } from './API/Firebase';
+import { useNavigation } from '@react-navigation/core';
 
 
 
@@ -32,12 +33,13 @@ const ToDoList = props => {
             
         
     }, []);
+    const navigation = useNavigation();
 
     const _onPress_Edit = item => {
         //Burada yaptığımız işlem AddNoteScreen'e item'in Id'sini göndermek.
         {
             isDeleteModeOn ? setIsDeleteModeOn(false) : 
-            props.navigation.navigate("addnote-screen",{ itemKey: item.key})
+            navigation.navigate("addnote-screen",{ itemKey: item.key})
         }
     }
     
