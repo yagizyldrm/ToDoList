@@ -57,7 +57,16 @@ export const getNoteDetail = (itemKey, onRetrieved) =>{
         })
 }
 
+export const deleteItem = itemKey => {
+    const userId = getCurrentUser().uid;
+    database()
+        .ref(`/noteThumbnailList/${userId}/${itemKey}`)
+        .remove();
 
+    database()
+        .ref(`/noteList/${itemKey}`)
+        .remove();
+}
 
 
 

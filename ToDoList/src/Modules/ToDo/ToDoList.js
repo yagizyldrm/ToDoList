@@ -10,7 +10,7 @@ import { Svgs } from '../../StylingConstants';
 import getStyles from './Styles/ToDoScreenStyles';
 
 import { useLocalization, texts } from '../Localization';
-import { subscribeToNoteData } from './API/Firebase';
+import { deleteItem, subscribeToNoteData } from './API/Firebase';
 
 
 
@@ -18,6 +18,8 @@ const ToDoList = props => {
 
     console.log("ToDoList");
     const [noteList, setNoteList] = useState(null);
+    const [isDeleteModeOn, setIsDeleteModeOn] = useState(false);
+
     const loc = useLocalization();
     const { styles } = useThemedValues(getStyles);
 
@@ -36,6 +38,13 @@ const ToDoList = props => {
         props.navigation.navigate("addnote-screen",{ itemKey: item.key})
     }
 
+    // Silmek için bu fonksiyonu kullanıyoruz.
+    const _onPress_Delete = (item) => {
+        // deleteItem firebase'den geliyor.
+            deleteItem(item.key)
+    }
+
+
 
 
 
@@ -49,7 +58,7 @@ const ToDoList = props => {
                 <TouchableOpacity style={styles.titleContainer} onPress={() => _onPress_Edit(item)}>
                     <Text style={styles.messageText}>{item.taskname}</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.deleteIconContainer} >
+                <TouchableOpacity style={styles.deleteIconContainer} onPress={() => _onPress_Delete(item)}>
                     <Icon iconStyle={styles.deleteIcon} svg={Svgs.DeleteIcon} />
                 </TouchableOpacity>
             </View>
