@@ -35,8 +35,12 @@ const ToDoList = props => {
 
     const _onPress_Edit = item => {
         //Burada yaptığımız işlem AddNoteScreen'e item'in Id'sini göndermek.
-        props.navigation.navigate("addnote-screen",{ itemKey: item.key})
+        {
+            isDeleteModeOn ? setIsDeleteModeOn(false) : 
+            props.navigation.navigate("addnote-screen",{ itemKey: item.key})
+        }
     }
+    
 
     // Silmek için bu fonksiyonu kullanıyoruz.
     const _onPress_Delete = (item) => {
@@ -44,9 +48,10 @@ const ToDoList = props => {
             deleteItem(item.key)
     }
 
-
-
-
+    const _onLongPress_Delete = () => {
+        setIsDeleteModeOn(true)
+    }
+    
 
     const _renderToDoItem = ({ item }) => {
         console.log('rendertodoitem içi');
@@ -55,11 +60,16 @@ const ToDoList = props => {
                 <TouchableOpacity style={styles.checkIconContainer} >
                     <Icon iconStyle={styles.checkIcon} svg={Svgs.Checkbox} />
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.titleContainer} onPress={() => _onPress_Edit(item)}>
+                <TouchableOpacity 
+                style={styles.titleContainer} 
+                onLongPress={() => _onLongPress_Delete()}
+                onPress={() => _onPress_Edit(item)}>
                     <Text style={styles.messageText}>{item.taskname}</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.deleteIconContainer} onPress={() => _onPress_Delete(item)}>
-                    <Icon iconStyle={styles.deleteIcon} svg={Svgs.DeleteIcon} />
+                <TouchableOpacity style={styles.deleteIconContainer} onPress={() => _onPress_Delete(item)} >
+                    {
+                        isDeleteModeOn ? <Icon iconStyle={styles.deleteIcon} svg={Svgs.DeleteIcon} /> : null
+                    }
                 </TouchableOpacity>
             </View>
         )
