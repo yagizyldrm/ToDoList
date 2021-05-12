@@ -20,6 +20,7 @@ const ToDoList = props => {
     console.log("ToDoList");
     const [noteList, setNoteList] = useState(null);
     const [isDeleteModeOn, setIsDeleteModeOn] = useState(false);
+    const [isDoneList, setIsDoneList] = useState(false);
 
     const loc = useLocalization();
     const { styles } = useThemedValues(getStyles);
@@ -43,7 +44,6 @@ const ToDoList = props => {
         }
     }
     
-
     // Silmek için bu fonksiyonu kullanıyoruz.
     const _onPress_Delete = (item) => {
         // deleteItem firebase'den geliyor.
@@ -54,12 +54,19 @@ const ToDoList = props => {
         setIsDeleteModeOn(true)
     }
     
+    const _onPress_Done = (item) => {
+        setIsDoneList(true)
+    }
 
     const _renderToDoItem = ({ item }) => {
         console.log('rendertodoitem içi');
         return (
+            isDoneList 
+            ?
+            null 
+            : 
             <View style={styles.todoBox}>
-                <TouchableOpacity style={styles.checkIconContainer} >
+                <TouchableOpacity style={styles.checkIconContainer} onPress = {() => _onPress_Done(item)}>
                     <Icon iconStyle={styles.checkIcon} svg={Svgs.Checkbox} />
                 </TouchableOpacity>
                 <TouchableOpacity 
@@ -80,14 +87,18 @@ const ToDoList = props => {
     const _renderDoneItem = ({ item }) => {
         console.log('renderDone içi');
         return (
-            <View style={styles.doneBox}>
+            isDoneList 
+            ? 
+                <View style={styles.doneBox}>
                 <TouchableOpacity style={styles.checkedIconContainer} >
                     <Icon iconStyle={styles.checkedIcon} svg={Svgs.Checkedbox} />
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.doneTitleContainer}>
                     <Text style={styles.doneMessageText}>{item.taskname}</Text>
-                </TouchableOpacity>
-            </View>
+                </TouchableOpacity> 
+                </View>
+            :
+                null   
         )
     }
     
