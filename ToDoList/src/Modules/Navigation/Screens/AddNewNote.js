@@ -4,7 +4,7 @@ import DateTimePickerModal from "react-native-modal-datetime-picker";
 import DateTimePicker from '@react-native-community/datetimepicker';
 import moment from "moment";
 import { useThemedValues, colorNames } from "../../Theming";
-import { texts, useLocalization } from "../../Localization"
+import { Locales, texts, useLocale, useLocalization } from "../../Localization"
 
 import getStyles from "./Styles/AddNewNoteStyles";
 import { addNote, getNoteDetail } from '../../ToDo/API/Firebase';
@@ -19,11 +19,13 @@ const AddNewNote = props => {
     const [taskname, setTaskname] = useState("");
     const [time, setTime] = useState(new Date());
     const [todayDate, setDateToday] = useState('');
-    const [todayTime,setTodayTime] = useState('');
+    const [todayTime, setTodayTime] = useState('');
     const [noteDetails, setNoteDetails] = useState('');
     const [isComplated, setIsComplated] = useState(false);
-    
-    
+
+    const locale = useLocale();
+
+
 
     const onChangeDate = (event, selectedDate) => {
         if (event.type === 'dismissed') {
@@ -37,9 +39,9 @@ const AddNewNote = props => {
             setDateToday(moment(currentDate).format('DD-MM-YYYY'));
         }
     };
-    
-   
-    
+
+
+
 
     const onChangeTime = (event, selectedTime) => {
         if (event.type === 'dismissed') {
@@ -80,7 +82,7 @@ const AddNewNote = props => {
             todayDate: todayDate,
             todayTime: todayTime,
             isComplated: false,
-            
+
         };
 
         const onComplate = () => {
@@ -114,6 +116,21 @@ const AddNewNote = props => {
     }, []);
 
 
+
+
+    useEffect(() => {
+
+        if (locale === Locales.turkish) {
+            setDateToday(moment(date).format("DD-MM-YYYY"))
+            setTodayTime(moment(time).format("HH:mm"))
+        }
+        else if (locale === Locales.english) {
+            setDateToday(moment(date).format("MM-DD-YYYY"));
+            setTodayTime(moment(time).format("LT"));
+        }
+    })
+
+
     const { styles, colors } = useThemedValues(getStyles);
     const loc = useLocalization();
 
@@ -139,21 +156,21 @@ const AddNewNote = props => {
                             textAlignVertical="center"
                             placeholderTextColor={colors[colorNames.addNewNote.placeHolderText]}
                             editable={false}>
-                            
+
                         </TextInput>
                         <TouchableOpacity style={styles.datePicker} onPress={showModeDate}>
-                        {dateShow && (
-                            <DateTimePicker
-                                testID="datePicker"
-                                value={date}
-                                mode={mode}
-                                is24Hour={true}
-                                display="default"
-                                onChange={onChangeDate}
-                                defaultDate={"01-01-2010"}
-                            />
-                        )}
-                        <Text style={{color:colors[colorNames.addNewNote.headerText],fontFamily:Fonts.type.regular}}  >{loc.t(texts.setDate)}</Text></TouchableOpacity>
+                            {dateShow && (
+                                <DateTimePicker
+                                    testID="datePicker"
+                                    value={date}
+                                    mode={mode}
+                                    is24Hour={true}
+                                    display="default"
+                                    onChange={onChangeDate}
+                                    defaultDate={"01-01-2010"}
+                                />
+                            )}
+                            <Text style={{ color: colors[colorNames.addNewNote.headerText], fontFamily: Fonts.type.regular }}  >{loc.t(texts.setDate)}</Text></TouchableOpacity>
                     </View>
                     <View style={styles.datePickerTextInputContainer}>
                         <TextInput
@@ -162,20 +179,21 @@ const AddNewNote = props => {
                             style={styles.endDateInput}
                             placeholder={loc.t(texts.time)}
                             textAlignVertical="center"
-                            placeholderTextColor={colors[colorNames.addNewNote.placeHolderText]} >
+                            placeholderTextColor={colors[colorNames.addNewNote.placeHolderText]}
+                            editable={false}>
                         </TextInput>
                         <TouchableOpacity style={styles.datePicker} onPress={showModeTime}>
-                        {timeShow && (
-                            <DateTimePicker
-                                testID="timePicker"
-                                value={time}
-                                mode={mode}
-                                is24Hour={true}
-                                display="default"
-                                onChange={onChangeTime}
-                            />
-                        )}
-                        <Text style={{color:colors[colorNames.addNewNote.headerText],fontFamily:Fonts.type.regular}} >{loc.t(texts.setTime)}</Text>
+                            {timeShow && (
+                                <DateTimePicker
+                                    testID="timePicker"
+                                    value={time}
+                                    mode={mode}
+                                    is24Hour={true}
+                                    display="default"
+                                    onChange={onChangeTime}
+                                />
+                            )}
+                            <Text style={{ color: colors[colorNames.addNewNote.headerText], fontFamily: Fonts.type.regular }} >{loc.t(texts.setTime)}</Text>
                         </TouchableOpacity>
                     </View>
                     <TextInput
