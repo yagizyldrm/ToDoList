@@ -101,5 +101,6 @@ export default Colors => StyleSheet.create({
         alignItems:"center",
         fontFamily:Fonts.type.bold,
     },
+    
 })
 

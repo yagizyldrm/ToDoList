@@ -14,7 +14,8 @@ const AddNewNote = props => {
 
     const [date, setDate] = useState(new Date());
     const [mode, setMode] = useState('date');
-    const [show, setShow] = useState(false);
+    const [dateShow, setDateShow] = useState(false);
+    const [timeShow, setTimeShow] = useState(false);
     const [taskname, setTaskname] = useState("");
     const [time, setTime] = useState(new Date());
     const [todayDate, setDateToday] = useState('');
@@ -26,12 +27,12 @@ const AddNewNote = props => {
 
     const onChangeDate = (event, selectedDate) => {
         if (event.type === 'dismissed') {
-            setShow(false);
+            setDateShow(false);
         }
 
         else {
             const currentDate = selectedDate;
-            setShow(Platform.OS === 'ios');
+            setDateShow(Platform.OS === 'ios');
             setDate(currentDate);
             setDateToday(moment(currentDate).format('DD-MM-YYYY'));
         }
@@ -42,12 +43,12 @@ const AddNewNote = props => {
 
     const onChangeTime = (event, selectedTime) => {
         if (event.type === 'dismissed') {
-            setShow(false);
+            setTimeShow(false);
         }
 
         else {
             const currentTime = selectedTime;
-            setShow(Platform.OS === 'ios');
+            setTimeShow(Platform.OS === 'ios');
             setTime(currentTime);
             setTodayTime(moment(currentTime).format('LT'));
         }
@@ -60,11 +61,11 @@ const AddNewNote = props => {
     }, [])
 
     const showModeDate = () => {
-        setShow(true);
+        setDateShow(true);
         setMode('date');
     };
     const showModeTime = () => {
-        setShow(true);
+        setTimeShow(true);
         setMode('time');
     };
 
@@ -132,7 +133,7 @@ const AddNewNote = props => {
                     <View style={styles.datePickerTextInputContainer}>
                         <TextInput
                             value={todayDate}
-                            onChangeText={setDate}
+                            onChangeText={setDateToday}
                             style={styles.endDateInput}
                             placeholder={loc.t(texts.endDate)}
                             textAlignVertical="center"
@@ -141,7 +142,7 @@ const AddNewNote = props => {
                             
                         </TextInput>
                         <TouchableOpacity style={styles.datePicker} onPress={showModeDate}>
-                        {show && (
+                        {dateShow && (
                             <DateTimePicker
                                 testID="datePicker"
                                 value={date}
@@ -157,14 +158,14 @@ const AddNewNote = props => {
                     <View style={styles.datePickerTextInputContainer}>
                         <TextInput
                             value={todayTime}
-                            onChangeText={setTime}
+                            onChangeText={setTodayTime}
                             style={styles.endDateInput}
                             placeholder={loc.t(texts.time)}
                             textAlignVertical="center"
                             placeholderTextColor={colors[colorNames.addNewNote.placeHolderText]} >
                         </TextInput>
                         <TouchableOpacity style={styles.datePicker} onPress={showModeTime}>
-                        {show && (
+                        {timeShow && (
                             <DateTimePicker
                                 testID="timePicker"
                                 value={time}
