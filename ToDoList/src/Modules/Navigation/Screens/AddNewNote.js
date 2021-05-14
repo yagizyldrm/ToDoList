@@ -203,7 +203,8 @@ const AddNewNote = props => {
                         placeholder={loc.t(texts.noteDetails)}
                         textAlign="left"
                         textAlignVertical="top"
-                        placeholderTextColor={colors[colorNames.addNewNote.placeHolderText]}>
+                        placeholderTextColor={colors[colorNames.addNewNote.placeHolderText]}
+                        multiline>
                     </TextInput>
                     <TouchableOpacity style={styles.addButton} onPress={_onPress_AddSaveNote}>
                         <Text
