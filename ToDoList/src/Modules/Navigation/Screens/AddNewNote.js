@@ -152,7 +152,7 @@ const AddNewNote = props => {
                                 defaultDate={"01-01-2010"}
                             />
                         )}
-                        <Text>Tarih</Text></TouchableOpacity>
+                        <Text style={{color:colors[colorNames.addNewNote.headerText],fontFamily:Fonts.type.regular}}  >{loc.t(texts.setDate)}</Text></TouchableOpacity>
                     </View>
                     <View style={styles.datePickerTextInputContainer}>
                         <TextInput
@@ -174,7 +174,8 @@ const AddNewNote = props => {
                                 onChange={onChangeTime}
                             />
                         )}
-                        <Text>Saat</Text></TouchableOpacity>
+                        <Text style={{color:colors[colorNames.addNewNote.headerText],fontFamily:Fonts.type.regular}} >{loc.t(texts.setTime)}</Text>
+                        </TouchableOpacity>
                     </View>
                     <TextInput
                         value={noteDetails}
