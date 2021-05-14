@@ -25,11 +25,15 @@ export default Colors => StyleSheet.create({
         fontFamily:Fonts.type.medium,
         
     },
+    datePickerTextInputContainer:{
+        flexDirection:"row",
+        justifyContent:"space-around",
+        marginHorizontal:20,
+        marginVertical:Metrics.width*0.005,
+    },
     endDateInput:{
-        flex:0.08,
+        flex:0.5,
         backgroundColor:Colors[colorNames.addNewNote.background],
-        marginHorizontal:Metrics.width*0.05,
-        marginVertical:Metrics.width*0.01,
         borderWidth:2,
         borderRadius:10,
         borderColor:Colors[colorNames.addNewNote.border],
@@ -37,6 +41,16 @@ export default Colors => StyleSheet.create({
         paddingLeft:10,
         color:Colors[colorNames.addNewNote.text],
         fontFamily:Fonts.type.medium,
+        marginRight:5,
+    },
+    datePicker:{
+        borderColor:Colors[colorNames.addNewNote.border],
+        borderRadius:10,     
+        flex:0.5,
+        backgroundColor:Colors[colorNames.addNewNote.border],
+        alignItems:"center",
+        justifyContent:"center",
+        marginLeft:5,
     },
     timeInput:{
         flex:0.08,

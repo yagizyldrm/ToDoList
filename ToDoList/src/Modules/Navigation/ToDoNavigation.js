@@ -13,6 +13,7 @@ import { colorNames, useThemedValues } from "../Theming";
 
 import getStyles from "../Navigation/Screens/Styles/AddNewNoteStyles";
 import { Fonts } from '../../StylingConstants';
+import DummyScreen from './Screens/DummyScreen';
 
 const ToDoStack = createStackNavigator();
 
@@ -62,6 +63,22 @@ const ToDoNavigation = () => {
                 component={AddNewNote}
                 options={{
                     title:loc.t(texts.addNewNote),
+                    headerStyle:{
+                        backgroundColor:colors[colorNames.addNewNote.border]
+                    },
+                    headerTitleAlign:"center",
+                    headerTintColor:colors[colorNames.settings.tintColor],
+                    headerTitleStyle:{
+                        color:colors[colorNames.addNewNote.headerText],
+                        fontFamily:Fonts.type.medium
+                    }
+                }}
+            />
+            <ToDoStack.Screen 
+                name="dummy-screen"
+                component={DummyScreen}
+                options={{
+                    title:"Dummy-Screen",
                     headerStyle:{
                         backgroundColor:colors[colorNames.addNewNote.border]
                     },

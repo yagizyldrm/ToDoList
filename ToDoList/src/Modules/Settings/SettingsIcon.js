@@ -28,7 +28,7 @@ const SettingsIcon = props => {
     const navigation = useNavigation();
     return (
         <View style={styles.iconCon}>
-        <TouchableOpacity style={styles.iconContainer} onPress={() => navigation.navigate('settings-screen')}>
+        <TouchableOpacity style={styles.iconContainer} onPress={() => navigation.navigate("dummy-screen")}>
             <Icon iconStyle={styles.icon} svg={Svgs.SettingsIcon} />
         </TouchableOpacity>
         </View>

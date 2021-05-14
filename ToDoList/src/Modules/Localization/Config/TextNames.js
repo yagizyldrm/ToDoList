@@ -22,6 +22,8 @@ export const texts = {
     addNewNote:"addNewNote",
     completed:"completed",
     edit:"edit",
+    setDate:"pickADate",
+    setTime:"setTime",
 
 };
 
@@ -49,6 +51,8 @@ export const english={
     [texts.addNewNote]:"Add New Note",
     [texts.completed]:"Completed",
     [texts.edit]:"EDIT",
+    [texts.setDate]:"Set Date",
+    [texts.setTime]:"Set Time"
 
 };
 
@@ -76,4 +80,6 @@ export const turkish ={
     [texts.addNewNote]:"Yeni Not Ekle",
     [texts.completed]:"Tamamlananlar",
     [texts.edit]:"DÜZENLE",
+    [texts.setDate]:"Tarihi Seç",
+    [texts.setTime]:"Saati Seç"
 };

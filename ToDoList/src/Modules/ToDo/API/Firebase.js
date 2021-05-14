@@ -28,7 +28,7 @@ export const addNote = async (item, onComplate) => {
     try {
         const noteThumbnail = {
             taskname: item.taskname,
-            endDate: item.endDate,
+            date: item.endDate,
         };
         const userId = getCurrentUser().uid;
 
