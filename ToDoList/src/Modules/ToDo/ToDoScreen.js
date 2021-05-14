@@ -1,9 +1,9 @@
-import React from 'react';
-import { TouchableOpacity, View, Text  } from 'react-native';
+import React, { useRef } from 'react';
+import { TouchableOpacity, View, Text, DrawerLayoutAndroid } from 'react-native';
 
 import { useThemedValues } from "../Theming";
-import { useDispatchChangeLocale, useLocale,  useLocaleOptions, useLocalization } from "../Localization";
-import { useNavigation } from '@react-navigation/core'; 
+import { useDispatchChangeLocale, useLocale, useLocaleOptions, useLocalization, texts } from "../Localization";
+import { useNavigation } from '@react-navigation/core';
 
 import ToDoList from './ToDoList';
 import Icon from '../../Components/Icon';
@@ -12,41 +12,90 @@ import { Svgs } from '../../StylingConstants';
 
 import getStyles from './Styles/ToDoScreenStyles';
 import { getData } from './API/Firebase';
+import { useSelector } from 'react-redux';
+import { userSelector } from '../Auth';
+
 
 
 const ToDoScreen = props => {
 
-     //firebase realtime database
 
-    // Theming
-    const { styles, colors } = useThemedValues(getStyles);
+  const drawer = useRef(null);
+  const user = useSelector(userSelector);
+  const { styles } = useThemedValues(getStyles);
 
-    // Localization
-    const currentLocale = useLocale();
-    const loc = useLocalization();
-    const localeOptions = useLocaleOptions();
-    const changeLocale = useDispatchChangeLocale();
+  // Localization
+  const currentLocale = useLocale();
+  const loc = useLocalization();
+  const localeOptions = useLocaleOptions();
+  const changeLocale = useDispatchChangeLocale();
 
-    // Navigation
-    const navigation = useNavigation();
+  // Navigation
+  const navigation = useNavigation();
 
-    const _onPress_Add = () =>{
-        props.navigation.navigate("addnote-screen")
-    }
-    
+  const _onPress_Add = () => {
+    props.navigation.navigate("addnote-screen")
+  }
 
+  //Drawer
+  const navigationView = () => {
     return (
-        <>
-            <View style={styles.container}>
-                    <ToDoList />
-            </View> 
-            <TouchableOpacity style={styles.addButton} onPress={_onPress_Add}>
-                <View style={styles.iconContainer} >
-                    <Icon iconStyle={styles.icon} svg={Svgs.PlusButton} />
-                </View>
-            </TouchableOpacity>
-        </>
+      <View>
+        <View style={styles.infoContainer}>
+          <Text style={styles.appName}>
+            TODO
+        </Text>
+          <Text style={styles.userName}>
+            {user.displayName}
+          </Text>
+          <Text style={styles.email}>
+            {user.email}
+          </Text>
+        </View>
+        <View style={styles.categoriesContainer}>
+          <View style={styles.categoryTitleContainer}>
+            <Text style={styles.categoryText}>{loc.t(texts.categories)}</Text>
+          </View>
+          <TouchableOpacity style={styles.touchableContainer} onPress={() => props.navigation.navigate("home-screen")}>
+            <View style={styles.drawerIconsContainer} >
+              <Icon iconStyle={styles.drawerIcons} svg={Svgs.HomeIcon} />
+            </View>
+            <Text style={styles.categoryText}>{loc.t(texts.home)}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.touchableContainer} onPress={() => props.navigation.navigate("work-screen")}>
+            <View style={styles.drawerIconsContainer} >
+              <Icon iconStyle={styles.drawerIcons} svg={Svgs.WorkIcon} />
+            </View>
+            <Text style={styles.categoryText}>{loc.t(texts.work)}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.touchableContainer} onPress={() => props.navigation.navigate("other-screen")}>
+            <View style={styles.drawerIconsContainer} >
+              <Icon iconStyle={styles.drawerIcons} svg={Svgs.OtherIcon} />
+            </View>
+            <Text style={styles.categoryText}>{loc.t(texts.other)}</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
     );
+  }
+
+  return (
+    <DrawerLayoutAndroid
+      ref={drawer}
+      drawerWidth={styles.drawerWidth}
+      renderNavigationView={navigationView}
+      drawerBackgroundColor="rgba(0,0,0,0)"
+    >
+      <View style={styles.container}>
+        <ToDoList />
+      </View>
+      <TouchableOpacity style={styles.addButton} onPress={_onPress_Add}>
+        <View style={styles.iconContainer} >
+          <Icon iconStyle={styles.icon} svg={Svgs.PlusButton} />
+        </View>
+      </TouchableOpacity>
+    </DrawerLayoutAndroid>
+  );
 };
 
 export default ToDoScreen;

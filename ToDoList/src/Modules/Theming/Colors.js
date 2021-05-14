@@ -4,11 +4,16 @@ const constantColors = {
     black: '#2D2D2D',
     transparent: 'transparent',
     pink: '#ff9cf7',
-    blue: '#189ad3', // main blue
+    blue: '#00aed9', // main blue #189ad3
     purple: '#800080',
     darkblack: 'black',
     headerBlue: '#189ad3',
     fadedBlue: '#71c7ec',
+    drawerBlues:{
+        1: '#06afce',
+        2: '#59d1e8',
+        3: '#b5d7df',
+    },
 
     greys: {
         1: '#383838',
@@ -81,6 +86,11 @@ export const colorNames = {
         headerText:"addNewNote/headerText",
         placeHolderText:"addNewNote/placeHolderText",
     },
+    drawer: {
+        infoBackground: "drawer/infoBackground",
+        categoryTitleBackground: "drawer/categoryTitleBackground",
+        touchableBackground: "drawer/touchableBackground"
+    }
     
 };
 
@@ -126,6 +136,10 @@ export const darkColors = {
     [colorNames.addNewNote.todayText]: constantColors.white,
     [colorNames.addNewNote.headerText]: constantColors.white,
     [colorNames.addNewNote.placeHolderText]: toRGBA(constantColors.white,60),
+    //drawer
+    [colorNames.drawer.infoBackground]: constantColors.drawerBlues[1],
+    [colorNames.drawer.categoryTitleBackground]: constantColors.drawerBlues[2],
+    [colorNames.drawer.touchableBackground]: constantColors.drawerBlues[3],
 };
 
 export const lightColors = {
@@ -173,4 +187,10 @@ export const lightColors = {
     [colorNames.addNewNote.todayText]: constantColors.blue,
     [colorNames.addNewNote.headerText]: constantColors.white,
     [colorNames.addNewNote.placeHolderText]: toRGBA(constantColors.greys[2], 80),
+
+    //drawer
+    [colorNames.drawer.infoBackground]: constantColors.drawerBlues[1],
+    [colorNames.drawer.categoryTitleBackground]: constantColors.drawerBlues[2],
+    [colorNames.drawer.touchableBackground]: constantColors.drawerBlues[3],
+
 };

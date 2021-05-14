@@ -22,7 +22,10 @@ export const texts = {
     addNewNote:"addNewNote",
     completed:"completed",
     edit:"edit",
-
+    categories: "categories",
+    home: "home",
+    work: "work",
+    other: "other"
 };
 
 export const english={
@@ -49,7 +52,10 @@ export const english={
     [texts.addNewNote]:"Add New Note",
     [texts.completed]:"Completed",
     [texts.edit]:"EDIT",
-
+    [texts.categories]: "Categories",
+    [texts.home]: "Home",
+    [texts.work]: "Work",
+    [texts.other]: "Other"
 };
 
 export const turkish ={
@@ -76,4 +82,8 @@ export const turkish ={
     [texts.addNewNote]:"Yeni Not Ekle",
     [texts.completed]:"Tamamlananlar",
     [texts.edit]:"DÜZENLE",
+    [texts.categories]: "Kategoriler",
+    [texts.home]: "Ev",
+    [texts.work]: "İş",
+    [texts.other]: "Diğer"
 };

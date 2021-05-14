@@ -19,6 +19,7 @@ const Metrics = {
   textMargin: width * 0.03,
   boxNormalHeight: width * 0.12,
   boxTallHeight: width * 0.2,
+  drawerWidth:180,
 };
 
 export default Metrics;

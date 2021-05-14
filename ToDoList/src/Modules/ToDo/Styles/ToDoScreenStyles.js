@@ -177,6 +177,62 @@ export default Colors => StyleSheet.create({
     },
     deleteIcon: {
         color: Colors[colorNames.todo.deleteButton],
-    }
+    },
 
+    // drawer
+    drawerWidth: Metrics.drawerWidth, 
+
+    infoContainer: {
+        width: Metrics.drawerWidth, 
+        height: Metrics.width *0.3, 
+        backgroundColor: Colors[colorNames.drawer.infoBackground],
+        borderTopRightRadius: Metrics.borderRadiusFullRound,
+        borderBottomRightRadius: Metrics.borderRadiusFullRound / 12,
+    },
+    appName: {
+        fontFamily: Fonts.type.bold,
+        fontSize: Fonts.size(35), 
+        marginLeft: Metrics.width * 0.03, 
+    },
+    userName: { 
+        fontFamily: Fonts.type.bold,
+        fontSize: Fonts.size(20), 
+        marginLeft: Metrics.width * 0.03, 
+    },
+    email: {
+        fontFamily: Fonts.type.medium,
+        fontSize: Fonts.size(14), 
+        marginLeft: Metrics.width * 0.03,
+    },
+    categoryTitleContainer: {
+        width: Metrics.drawerWidth, 
+        backgroundColor: Colors[colorNames.drawer.categoryTitleBackground], 
+        borderRadius: Metrics.borderRadiusFullRound,
+    },
+    categoriesContainer: {
+        marginTop: Metrics.width * 0.06,
+    },
+    touchableContainer: {
+        width: Metrics.drawerWidth,  
+        backgroundColor: Colors[colorNames.drawer.touchableBackground],
+        marginTop: Metrics.width * 0.03,
+        flexDirection:'row',
+        borderRadius: Metrics.borderRadiusFullRound,    
+    },
+    categoryText: {
+        marginLeft: Metrics.width * 0.03, 
+        marginVertical: Metrics.width * 0.02,
+    },
+    drawerIcons: {
+        width: Metrics.width * 0.05,
+        height: undefined,
+        aspectRatio: 1,
+        marginLeft:Metrics.width * 0.022,
+        marginTop: Metrics.width / 360,
+    },
+    drawerIconsContainer: {
+        width: Metrics.width * 0.085,
+        height: Metrics.width * 0.085,
+        aspectRatio: 1,
+    }
 });
