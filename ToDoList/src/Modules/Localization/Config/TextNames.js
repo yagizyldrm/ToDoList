@@ -61,6 +61,8 @@ export const english={
     [texts.other]: "Other",
     [texts.setDate]:"Set Date",
     [texts.setTime]:"Set Time",
+    [texts.setDate]:"Set Date",
+    [texts.setTime]:"Set Time"
 
 };
 
@@ -94,4 +96,6 @@ export const turkish ={
     [texts.other]: "Diğer",
     [texts.setDate]:"Tarihi Seç",
     [texts.setTime]:"Saati Seç",
+    [texts.setDate]:"Tarihi Seç",
+    [texts.setTime]:"Saati Seç"
 };
