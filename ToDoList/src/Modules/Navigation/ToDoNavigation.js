@@ -1,7 +1,7 @@
 import React from 'react';
-import { Text, TouchableOpacity, View, Button } from 'react-native';
+
 import { createStackNavigator, HeaderTitle } from '@react-navigation/stack';
-import { useNavigation } from '@react-navigation/core';
+
 import SettingsScreen from "../Settings/SettingsScreen";
 import ToDoScreen from '../ToDo/ToDoScreen';
 import AddNewNote from './Screens/AddNewNote';
@@ -13,12 +13,13 @@ import { colorNames, useThemedValues } from "../Theming";
 
 import getStyles from "../Navigation/Screens/Styles/AddNewNoteStyles";
 import { Fonts } from '../../StylingConstants';
-import DummyScreen from './Screens/DummyScreen';
-import {HomeScreen, WorkScreen, OtherScreen} from '../Categories'
+import { HomeScreen, WorkScreen, OtherScreen } from '../Categories'
+
 
 const ToDoStack = createStackNavigator();
 
 const ToDoNavigation = () => {
+    
     const { styles, colors } = useThemedValues(getStyles);
     const loc = useLocalization();
     console.log('todoNavigation');
@@ -122,9 +123,7 @@ const ToDoNavigation = () => {
                         fontFamily: Fonts.type.medium
                     }
                 }}
-            />
-            
-            
+            /> 
         </ToDoStack.Navigator>
     );
 };

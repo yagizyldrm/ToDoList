@@ -28,6 +28,8 @@ export const texts = {
     other: "other",
     setDate:"pickADate",
     setTime:"setTime",
+    noteMessage:"noteMessage",
+    welcome:"welcome",
 
 };
 
@@ -62,7 +64,9 @@ export const english={
     [texts.setDate]:"Set Date",
     [texts.setTime]:"Set Time",
     [texts.setDate]:"Set Date",
-    [texts.setTime]:"Set Time"
+    [texts.setTime]:"Set Time",
+    [texts.noteMessage]:"What will you do today?",
+    [texts.welcome]:"Welcome,"
 
 };
 
@@ -97,5 +101,7 @@ export const turkish ={
     [texts.setDate]:"Tarihi Seç",
     [texts.setTime]:"Saati Seç",
     [texts.setDate]:"Tarihi Seç",
-    [texts.setTime]:"Saati Seç"
+    [texts.setTime]:"Saati Seç",
+    [texts.noteMessage]:"Bugün ne yapacaksın?",
+    [texts.welcome]:"Hoş geldin,"
 };

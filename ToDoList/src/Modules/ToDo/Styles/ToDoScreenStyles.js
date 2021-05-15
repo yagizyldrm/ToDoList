@@ -11,11 +11,10 @@ export default Colors => StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: Colors[colorNames.todo.background],
-        paddingBottom: Metrics.width * 0.07,
     },
     addButton: {
-        alignItems: 'center',
-        justifyContent: 'center',
+        right:0,
+        bottom:5,
         position: 'absolute',
         backgroundColor: 'transparent',
         width: Metrics.width * 0.18,
@@ -23,7 +22,6 @@ export default Colors => StyleSheet.create({
         flexDirection: 'column',
         marginTop: Metrics.width * 1.525,
         marginLeft: Metrics.width * 0.82,
-
     },
     iconContainer: {
         width: Metrics.width * 0.146,
