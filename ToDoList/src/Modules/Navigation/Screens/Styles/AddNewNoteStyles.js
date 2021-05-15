@@ -75,7 +75,7 @@ export default Colors => StyleSheet.create({
         minHeight:Metrics.width*0.01,
         backgroundColor:Colors[colorNames.addNewNote.background],
         borderColor:Colors[colorNames.addNewNote.border],
-        marginTop:Metrics.width*0.02,
+        marginVertical:Metrics.width*0.02,
         borderRadius:10,
         borderWidth:2,
         marginHorizontal:Metrics.width*0.05,

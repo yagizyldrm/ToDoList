@@ -145,7 +145,8 @@ const AddNewNote = props => {
                         style={styles.taskNameInput}
                         placeholder={loc.t(texts.taskname)}
                         textAlignVertical="center"
-                        placeholderTextColor={colors[colorNames.addNewNote.placeHolderText]}>
+                        placeholderTextColor={colors[colorNames.addNewNote.placeHolderText]}
+                        underlineColorAndroid="transparent">
                     </TextInput>
                     <View style={styles.datePickerTextInputContainer}>
                         <TextInput
@@ -204,7 +205,8 @@ const AddNewNote = props => {
                         textAlign="left"
                         textAlignVertical="top"
                         placeholderTextColor={colors[colorNames.addNewNote.placeHolderText]}
-                        multiline>
+                        multiline
+                        underlineColorAndroid="transparent">
                     </TextInput>
                     <TouchableOpacity style={styles.addButton} onPress={_onPress_AddSaveNote}>
                         <Text
