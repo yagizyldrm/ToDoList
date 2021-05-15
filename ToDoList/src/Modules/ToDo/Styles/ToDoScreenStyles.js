@@ -187,7 +187,7 @@ export default Colors => StyleSheet.create({
         height: Metrics.width *0.3, 
         backgroundColor: Colors[colorNames.drawer.infoBackground],
         borderTopRightRadius: Metrics.borderRadiusFullRound,
-        borderBottomRightRadius: Metrics.borderRadiusFullRound / 12,
+        borderBottomRightRadius: Metrics.borderRadiusFullRound ,
     },
     appName: {
         fontFamily: Fonts.type.bold,

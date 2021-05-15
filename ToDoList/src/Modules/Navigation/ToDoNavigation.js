@@ -13,6 +13,7 @@ import { colorNames, useThemedValues } from "../Theming";
 
 import getStyles from "../Navigation/Screens/Styles/AddNewNoteStyles";
 import { Fonts } from '../../StylingConstants';
+import DummyScreen from './Screens/DummyScreen';
 import {HomeScreen, WorkScreen, OtherScreen} from '../Categories'
 
 const ToDoStack = createStackNavigator();
@@ -122,6 +123,7 @@ const ToDoNavigation = () => {
                     }
                 }}
             />
+            
             
         </ToDoStack.Navigator>
     );

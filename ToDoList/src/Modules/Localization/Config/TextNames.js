@@ -25,7 +25,10 @@ export const texts = {
     categories: "categories",
     home: "home",
     work: "work",
-    other: "other"
+    other: "other",
+    setDate:"pickADate",
+    setTime:"setTime",
+
 };
 
 export const english={
@@ -55,7 +58,10 @@ export const english={
     [texts.categories]: "Categories",
     [texts.home]: "Home",
     [texts.work]: "Work",
-    [texts.other]: "Other"
+    [texts.other]: "Other",
+    [texts.setDate]:"Set Date",
+    [texts.setTime]:"Set Time",
+
 };
 
 export const turkish ={
@@ -85,5 +91,7 @@ export const turkish ={
     [texts.categories]: "Kategoriler",
     [texts.home]: "Ev",
     [texts.work]: "İş",
-    [texts.other]: "Diğer"
+    [texts.other]: "Diğer",
+    [texts.setDate]:"Tarihi Seç",
+    [texts.setTime]:"Saati Seç",
 };

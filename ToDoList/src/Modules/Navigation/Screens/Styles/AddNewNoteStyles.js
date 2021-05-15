@@ -25,18 +25,32 @@ export default Colors => StyleSheet.create({
         fontFamily:Fonts.type.medium,
         
     },
+    datePickerTextInputContainer:{
+        flexDirection:"row",
+        justifyContent:"space-around",
+        marginHorizontal:20,
+        marginVertical:Metrics.width*0.005,
+    },
     endDateInput:{
-        flex:0.08,
+        flex:0.5,
         backgroundColor:Colors[colorNames.addNewNote.background],
-        marginHorizontal:Metrics.width*0.05,
-        marginVertical:Metrics.width*0.01,
         borderWidth:2,
         borderRadius:10,
         borderColor:Colors[colorNames.addNewNote.border],
         alignItems:"center",
         paddingLeft:10,
         color:Colors[colorNames.addNewNote.text],
-        fontFamily:Fonts.type.medium,
+        fontFamily:Fonts.type.bold,
+        marginRight:5,
+    },
+    datePicker:{
+        borderColor:Colors[colorNames.addNewNote.border],
+        borderRadius:10,     
+        flex:0.5,
+        backgroundColor:Colors[colorNames.addNewNote.border],
+        alignItems:"center",
+        justifyContent:"center",
+        marginLeft:5,
     },
     timeInput:{
         flex:0.08,
@@ -51,18 +65,23 @@ export default Colors => StyleSheet.create({
         color:Colors[colorNames.addNewNote.text],
         fontFamily:Fonts.type.medium,
     },
+
+    
     noteDetailsInput:{
         flexGrow:1,
         flexShrink:1,
-        height:Metrics.width*0.9,
+        maxWidth:Metrics.width * 0.95,
+        maxHeight:Metrics.width*0.9,
+        minHeight:Metrics.width*0.01,
         backgroundColor:Colors[colorNames.addNewNote.background],
         borderColor:Colors[colorNames.addNewNote.border],
-        marginTop:Metrics.width*0.07,
+        marginVertical:Metrics.width*0.02,
         borderRadius:10,
         borderWidth:2,
         marginHorizontal:Metrics.width*0.05,
         alignItems:"center",
         paddingLeft:10,
+        paddingRight:10,
         color:Colors[colorNames.addNewNote.text],
         fontFamily:Fonts.type.medium,
     },
@@ -87,5 +106,6 @@ export default Colors => StyleSheet.create({
         alignItems:"center",
         fontFamily:Fonts.type.bold,
     },
+    
 })
 
