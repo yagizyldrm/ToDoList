@@ -97,13 +97,13 @@ export const colorNames = {
 export const darkColors = {
     // auth
     [colorNames.auth.background]: constantColors.black, 
-    [colorNames.auth.paleButtonText]: constantColors.greys[1],
+    [colorNames.auth.paleButtonText]: constantColors.white,
     [colorNames.auth.appNameText]: constantColors.blue,
     [colorNames.auth.inputPlaceholder]: toRGBA(constantColors.white, 40),
     [colorNames.auth.appIcon]: constantColors.blue,
-    [colorNames.auth.coloredButtonBackground]: constantColors.white,
+    [colorNames.auth.coloredButtonBackground]: constantColors.blue,
     [colorNames.auth.inputBorder]: constantColors.blue,
-    [colorNames.auth.coloredButtonText]: constantColors.black,
+    [colorNames.auth.coloredButtonText]: constantColors.white,
     [colorNames.auth.inputBackground]: toRGBA(constantColors.blue, 10),
     [colorNames.auth.paleButtonBackground]: constantColors.transparent,
     [colorNames.auth.inputText]: constantColors.white,
