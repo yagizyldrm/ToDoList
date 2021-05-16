@@ -20,10 +20,10 @@ const styles = (Colors) => StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        marginLeft:40
+        marginLeft: Metrics.width / 14,
     },
     inputsContainer: {
-        minHeight: Metrics.width * 0.5,
+        minHeight: Metrics.width * 0.4,
         justifyContent: 'center',
     },
     image: {
@@ -31,6 +31,9 @@ const styles = (Colors) => StyleSheet.create({
         height: '80%',
         aspectRatio: 1,
         resizeMode: 'contain',
+    },
+    logoAndNameContainer: {
+        flex:1,
     },
     buttonsContainer: {
         justifyContent: 'center',
@@ -44,12 +47,13 @@ const styles = (Colors) => StyleSheet.create({
         fontFamily: Fonts.type.bold,
         fontSize: Fonts.size(16),
         color: Colors[colorNames.auth.paleButtonText],
-        paddingVertical:5
+        paddingVertical: Metrics.width / 72
     },
     authLogoContainer: {
         width: Metrics.width * 0.8,
         height: undefined,
         aspectRatio: 1,
+        flex:1,
     },
     appNameContainer: {
         alignItems: 'center',

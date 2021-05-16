@@ -181,7 +181,7 @@ export default Colors => StyleSheet.create({
     drawerWidth: Metrics.drawerWidth, 
 
     infoContainer: {
-        marginTop:11,
+        marginTop: Metrics.width / 33,
         width: Metrics.drawerWidth, 
         height: Metrics.width *0.3, 
         backgroundColor: Colors[colorNames.addNewNote.border],
@@ -226,16 +226,16 @@ export default Colors => StyleSheet.create({
         width: Metrics.width * 0.05,
         height: undefined,
         aspectRatio: 1,
-        marginLeft:Metrics.width * 0.022,
-        marginTop: Metrics.width / 360,
     },
     drawerIconsContainer: {
-        width: Metrics.width * 0.085,
-        height: Metrics.width * 0.085,
+        width: Metrics.width * 0.081,
+        height: Metrics.width * 0.081,
         aspectRatio: 1,
+        marginLeft: Metrics.width * 0.022,
+        marginTop: Metrics.width / 360,
     },
     touchableSettingsContainer: {
-        width: Metrics.drawerWidth / 1.1, 
+        width: Metrics.drawerWidth, 
         backgroundColor: Colors[colorNames.drawer.settingsBackground],
         marginTop: Metrics.width * 0.03,
         flexDirection:'row',

@@ -31,13 +31,15 @@ const AuthScreen = props => {
                     style={styles.container}
                     activeOpacity={1}
                     onPress={Keyboard.dismiss}>
-                    <View style={styles.appLogoContainer}>
-                        <View style={styles.authLogoContainer}>
-                            <Icon svg={Svgs.AuthScreenLogo} iconStyle={styles.icon} />
+                    <View style={styles.logoAndNameContainer}>
+                        <View style={styles.appLogoContainer}>
+                            <View style={styles.authLogoContainer}>
+                                <Icon svg={Svgs.AuthScreenLogo} iconStyle={styles.icon} />
+                            </View>
                         </View>
-                    </View>
-                    <View style={styles.appNameContainer}>
-                        <Text style={styles.appNameText}>TODO</Text>
+                        <View style={styles.appNameContainer}>
+                            <Text style={styles.appNameText}>TODO</Text>
+                        </View>
                     </View>
                     <View style={styles.inputsContainer}>
                         {
@@ -66,7 +68,7 @@ const AuthScreen = props => {
                                 onChangeText={props.onChangeText_Password}
                                 autoCapitalize={'none'}
                                 secureTextEntry={true}
-                                
+
                             />
                         </View>
                     </View>
@@ -77,7 +79,7 @@ const AuthScreen = props => {
                             text={isLogin ? loginUppercase : signupUppercase} />
                         <TouchableOpacity style={styles.signupTouchable} onPress={() => setIsLogin(!isLogin)}>
                             <Text style={styles.signupText}>
-                            {isLogin ? loc.t(texts.signUp) : loc.t(texts.login)}
+                                {isLogin ? loc.t(texts.signUp) : loc.t(texts.login)}
                             </Text>
                         </TouchableOpacity>
                     </View>
