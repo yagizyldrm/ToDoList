@@ -11,7 +11,7 @@ export default Colors => StyleSheet.create({
     },
     drawerIconsContainer: {
         width: Metrics.width *0.5,
-        height: Metrics.width*0.5 ,
+        height: Metrics.width*0.48 ,
         aspectRatio: 1,
     },
 });
