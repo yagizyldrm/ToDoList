@@ -133,7 +133,7 @@ export const deutsch ={
     [texts.add]:"Fügen Sie eine neue Notiz",
     [texts.addNewNote]:"Fügen Sie eine neue Notiz",
     [texts.completed]:"Beendet",
-    [texts.edit]:"Edit",
+    [texts.edit]:"Editieren",
     [texts.categories]: "Categories",
     [texts.home]: "Home",
     [texts.work]: "Arbeit",

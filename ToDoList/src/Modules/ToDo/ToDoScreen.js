@@ -96,7 +96,7 @@ const ToDoScreen = props => {
             <View style={styles.container}>
                     <ToDoList />
                     <View style={{ flexDirection: "row", justifyContent: "space-between", height: Metrics.width * 0.22, marginHorizontal: Metrics.width * 0.05, backgroundColor: colors[colorNames.settings.background] }}>
-                        <View style={{ flexDirection: "column", alignItems: "center" }}>
+                        <View style={{ flexDirection: "column", alignItems: "center",marginLeft:20 }}>
                             <Text style={{ color: colors[colorNames.addNewNote.text], marginVertical: 10, fontFamily: Fonts.type.bold, fontSize: Fonts.size(20) }}>{loc.t(texts.welcome) + " " + user.displayName}</Text>
                             <Text style={{ color: colors[colorNames.addNewNote.text], marginBottom: 20, fontFamily: Fonts.type.regular, fontSize: Fonts.size(15) }}>{loc.t(texts.noteMessage)}</Text>
                         </View>

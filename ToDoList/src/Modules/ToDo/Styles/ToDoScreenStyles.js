@@ -14,7 +14,7 @@ export default Colors => StyleSheet.create({
     },
     addButton: {
         right:0,
-        bottom:5,
+        bottom:0,
         position: 'absolute',
         backgroundColor: 'transparent',
         width: Metrics.width * 0.18,
