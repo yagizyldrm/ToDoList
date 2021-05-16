@@ -93,6 +93,19 @@ export const deleteItem = itemKey => {
 }
 
 
+export const doneItem = itemKey => {
+    const userId = getCurrentUser().uid;
+    database()
+        .ref(`/noteThumbnailList/${userId}/${itemKey}`)
+        .update(itemKey);
+
+    database()
+        .ref(`/noteList/${itemKey}`)
+        .update(itemKey);
+}
+
+
+
 /*
 export const getData = () => {
     database()

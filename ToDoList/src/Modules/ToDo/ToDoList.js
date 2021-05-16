@@ -10,7 +10,7 @@ import { Svgs } from '../../StylingConstants';
 import getStyles from './Styles/ToDoScreenStyles';
 
 import { useLocalization, texts } from '../Localization';
-import { deleteItem, subscribeToNoteData } from './API/Firebase';
+import { deleteItem, doneItem, subscribeToNoteData, addNote } from './API/Firebase';
 import { useNavigation } from '@react-navigation/core';
 
 
@@ -54,7 +54,7 @@ const ToDoList = props => {
         setIsDeleteModeOn(true)
     }
     
-    const _onPress_Done = (item) => {
+    const _onPress_Done = (itemKey) => {
         setIsDoneList(true)
     }
 
