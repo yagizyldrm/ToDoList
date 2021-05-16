@@ -13,6 +13,7 @@ const constantColors = {
         1: '#06afce',
         2: '#59d1e8',
         3: '#b5d7df',
+        4: '#c3dfe5',
     },
 
     greys: {
@@ -89,7 +90,8 @@ export const colorNames = {
     drawer: {
         infoBackground: "drawer/infoBackground",
         categoryTitleBackground: "drawer/categoryTitleBackground",
-        touchableBackground: "drawer/touchableBackground"
+        touchableBackground: "drawer/touchableBackground",
+        settingsBackground: "drawer/settingsBackground"
     }
     
 };
@@ -140,6 +142,7 @@ export const darkColors = {
     [colorNames.drawer.infoBackground]: constantColors.drawerBlues[1],
     [colorNames.drawer.categoryTitleBackground]: constantColors.drawerBlues[2],
     [colorNames.drawer.touchableBackground]: constantColors.drawerBlues[3],
+    [colorNames.drawer.settingsBackground]: constantColors.drawerBlues[4],
 };
 
 export const lightColors = {
@@ -192,5 +195,6 @@ export const lightColors = {
     [colorNames.drawer.infoBackground]: constantColors.drawerBlues[1],
     [colorNames.drawer.categoryTitleBackground]: constantColors.drawerBlues[2],
     [colorNames.drawer.touchableBackground]: constantColors.drawerBlues[3],
+    [colorNames.drawer.settingsBackground]: constantColors.drawerBlues[4],
 
 };

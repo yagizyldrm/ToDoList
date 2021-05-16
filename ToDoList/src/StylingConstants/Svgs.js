@@ -14,6 +14,7 @@ import DeleteIcon from '../Assets/Svgs/deleteicon.svg';
 import HomeIcon from '../Assets/Svgs/home.svg';
 import WorkIcon from '../Assets/Svgs/work.svg';
 import OtherIcon from '../Assets/Svgs/other.svg';
+import ComingSoon from '../Assets/Svgs/comingsoon.svg';
 
 // Exports
 export default {
@@ -29,7 +30,7 @@ export default {
     DeleteIcon,
     HomeIcon,
     WorkIcon,
-    OtherIcon
-
+    OtherIcon,
+    ComingSoon,
 }
 

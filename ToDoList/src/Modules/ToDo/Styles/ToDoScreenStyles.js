@@ -181,7 +181,7 @@ export default Colors => StyleSheet.create({
     drawerWidth: Metrics.drawerWidth, 
 
     infoContainer: {
-        marginTop:20,
+        marginTop:11,
         width: Metrics.drawerWidth, 
         height: Metrics.width *0.3, 
         backgroundColor: Colors[colorNames.addNewNote.border],
@@ -219,7 +219,7 @@ export default Colors => StyleSheet.create({
         borderRadius: Metrics.borderRadiusFullRound,    
     },
     categoryText: {
-        marginLeft: Metrics.width * 0.03, 
+        marginLeft: Metrics.width * 0.04, 
         marginVertical: Metrics.width * 0.02,
     },
     drawerIcons: {
@@ -233,5 +233,22 @@ export default Colors => StyleSheet.create({
         width: Metrics.width * 0.085,
         height: Metrics.width * 0.085,
         aspectRatio: 1,
-    }
+    },
+    touchableSettingsContainer: {
+        width: Metrics.drawerWidth / 1.1, 
+        backgroundColor: Colors[colorNames.drawer.settingsBackground],
+        marginTop: Metrics.width * 0.03,
+        flexDirection:'row',
+        borderRadius: Metrics.borderRadiusFullRound, 
+    },
+    drawerSettinsIconContainer: {
+        width: Metrics.width * 0.08,
+        aspectRatio: 1,
+        marginLeft:Metrics.width * 0.022,
+        marginTop: Metrics.width / 145,
+    },
+    settingsText: {
+        marginLeft: Metrics.width * 0.025, 
+        marginVertical: Metrics.width * 0.02,
+    },
 });

@@ -80,6 +80,12 @@ const ToDoScreen = props => {
                             </View>
                             <Text style={styles.categoryText}>{loc.t(texts.other)}</Text>
                         </TouchableOpacity>
+                        <TouchableOpacity style={styles.touchableSettingsContainer} onPress={() => props.navigation.navigate("settings-screen")}>
+                            <View style={styles.drawerSettinsIconContainer}>
+                                <Icon iconStyle={styles.icon} svg={Svgs.SettingsIcon} />
+                            </View>
+                            <Text style={styles.settingsText}>{loc.t(texts.settings)}</Text>
+                        </TouchableOpacity>
                     </View>
                 </View>
             </>
@@ -94,19 +100,19 @@ const ToDoScreen = props => {
             drawerBackgroundColor="rgba(0,0,0,0)"
         >
             <View style={styles.container}>
-                    <ToDoList />
-                    <View style={{ flexDirection: "row", justifyContent: "space-between", height: Metrics.width * 0.22, marginHorizontal: Metrics.width * 0.05, backgroundColor: colors[colorNames.settings.background] }}>
-                        <View style={{ flexDirection: "column", alignItems: "center",marginLeft:20 }}>
-                            <Text style={{ color: colors[colorNames.addNewNote.text], marginVertical: 10, fontFamily: Fonts.type.bold, fontSize: Fonts.size(20) }}>{loc.t(texts.welcome) + " " + user.displayName}</Text>
-                            <Text style={{ color: colors[colorNames.addNewNote.text], marginBottom: 20, fontFamily: Fonts.type.regular, fontSize: Fonts.size(15) }}>{loc.t(texts.noteMessage)}</Text>
-                        </View>
-                        <TouchableOpacity style={styles.addButton} onPress={_onPress_Add}>
-                            <View style={styles.iconContainer} >
-                                <Icon iconStyle={styles.icon} svg={Svgs.PlusButton} />
-                            </View>
-                        </TouchableOpacity>
+                <ToDoList />
+                <View style={{ flexDirection: "row", justifyContent: "space-between", height: Metrics.width * 0.22, marginHorizontal: Metrics.width * 0.05, backgroundColor: colors[colorNames.settings.background] }}>
+                <View style={{ flexDirection: "column", alignItems: "center",marginLeft:20 }}>
+                        <Text style={{ color: colors[colorNames.addNewNote.text], marginVertical: 10, fontFamily: Fonts.type.bold, fontSize: Fonts.size(20) }}>{loc.t(texts.welcome) + " " + user.displayName}</Text>
+                        <Text style={{ color: colors[colorNames.addNewNote.text], marginBottom: 20, fontFamily: Fonts.type.regular, fontSize: Fonts.size(15) }}>{loc.t(texts.noteMessage)}</Text>
                     </View>
+                    <TouchableOpacity style={styles.addButton} onPress={_onPress_Add}>
+                        <View style={styles.iconContainer} >
+                            <Icon iconStyle={styles.icon} svg={Svgs.PlusButton} />
+                        </View>
+                    </TouchableOpacity>
                 </View>
+            </View>
         </DrawerLayoutAndroid>
     );
 };
