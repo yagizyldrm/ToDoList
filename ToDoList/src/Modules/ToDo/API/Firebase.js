@@ -57,6 +57,30 @@ export const getNoteDetail = (itemKey, onRetrieved) =>{
         })
 }
 
+export const updateNote = async (item, onComplate) => {
+    try {
+        await database()
+            .ref(`/noteList/${item.key}`)
+            .update(item);
+
+        const noteThumbnail = { 
+            taskname: item.taskname,
+        };
+
+        const userId = getCurrentUser().uid;
+        await database()
+            .ref(`/noteThumbnailList/${userId}/${item.key}`)
+            .update(noteThumbnail);
+
+        onComplate();
+
+    } catch (error) {
+        console.log(error);
+
+    }
+    
+}
+
 export const deleteItem = itemKey => {
     const userId = getCurrentUser().uid;
     database()
@@ -67,9 +91,6 @@ export const deleteItem = itemKey => {
         .ref(`/noteList/${itemKey}`)
         .remove();
 }
-
-
-
 
 
 /*

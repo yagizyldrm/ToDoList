@@ -7,7 +7,7 @@ import { useThemedValues, colorNames } from "../../Theming";
 import { Locales, texts, useLocale, useLocalization } from "../../Localization"
 
 import getStyles from "./Styles/AddNewNoteStyles";
-import { addNote, getNoteDetail } from '../../ToDo/API/Firebase';
+import { addNote, getNoteDetail, updateNote } from '../../ToDo/API/Firebase';
 import { Fonts } from '../../../StylingConstants';
 
 const AddNewNote = props => {
@@ -90,7 +90,11 @@ const AddNewNote = props => {
         }
 
         // _onPress_AddSaveNote'a basıldığında yukarıda oluşturulan (item'de) değerleri firebase'e aktarılmasını sağlayan kod.
-        addNote(item, onComplate);
+        {
+            itemKey ? updateNote(item, onComplate) 
+            :
+            addNote(item, onComplate);
+        }
     }
     useEffect(() => {
         if (itemKey) {
