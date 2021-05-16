@@ -82,8 +82,6 @@ const ToDoScreen = props => {
                         </TouchableOpacity>
                     </View>
                 </View>
-            
-                
             </>
         );
     }

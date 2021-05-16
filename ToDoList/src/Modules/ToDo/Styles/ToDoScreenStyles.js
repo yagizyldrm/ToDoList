@@ -181,13 +181,14 @@ export default Colors => StyleSheet.create({
     drawerWidth: Metrics.drawerWidth, 
 
     infoContainer: {
+        marginTop:20,
         width: Metrics.drawerWidth, 
         height: Metrics.width *0.3, 
-        backgroundColor: Colors[colorNames.drawer.infoBackground],
-        borderTopRightRadius: Metrics.borderRadiusFullRound,
-        borderBottomRightRadius: Metrics.borderRadiusFullRound ,
+        backgroundColor: Colors[colorNames.addNewNote.border],
+        borderTopRightRadius: Metrics.borderRadiusFullRound/10,
     },
     appName: {
+        color:"white",
         fontFamily: Fonts.type.bold,
         fontSize: Fonts.size(35), 
         marginLeft: Metrics.width * 0.03, 

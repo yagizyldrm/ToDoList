@@ -66,6 +66,7 @@ const AuthScreen = props => {
                                 onChangeText={props.onChangeText_Password}
                                 autoCapitalize={'none'}
                                 secureTextEntry={true}
+                                
                             />
                         </View>
                     </View>

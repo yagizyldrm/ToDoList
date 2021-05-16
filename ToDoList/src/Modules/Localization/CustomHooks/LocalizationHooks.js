@@ -21,6 +21,10 @@ export function useLocaleOptions() {
             {
                 key: Locales.turkish,
                 title: loc.t(texts.turkish),
+            },
+            {
+                key: Locales.deutsch,
+                title: loc.t(texts.deutsch),
             }
         ]
     }, [locale]);
@@ -29,7 +33,7 @@ export function useLocaleOptions() {
 }
 
 export function useLocale() {
-    const currentLocale= useSelector(LocalizationSelectors.locale); 
+    const currentLocale = useSelector(LocalizationSelectors.locale);
     return currentLocale;
 }
 
@@ -47,7 +51,7 @@ export function useLocalization() {
 
 export function useDispatchChangeLocale() {
     const dispatch = useDispatch();
-    return (locale) => {dispatch(LocalizationActions.changeLocale(locale));};
+    return (locale) => { dispatch(LocalizationActions.changeLocale(locale)); };
 }
 
 export function useLocaleDateFormat() {
@@ -57,5 +61,8 @@ export function useLocaleDateFormat() {
     }
     else if (locale === Locales.english) {
         return "MM/DD/YYYY";
+    }
+    else if (locale === Locales.deutsch) {
+        return "DD.MM.YYYY";
     }
 }

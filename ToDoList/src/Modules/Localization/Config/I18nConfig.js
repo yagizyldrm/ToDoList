@@ -1,6 +1,6 @@
 import I18n from 'i18n-js';
 
-import { english,turkish } from './TextNames';
+import { deutsch, english,turkish } from './TextNames';
 
 import { Locales } from '../LocalizationConstants';
 
@@ -13,6 +13,7 @@ I18n.locales.no = Locales.turkish;
 I18n.translations = {
     [Locales.english]: english,
     [Locales.turkish]: turkish,
+    [Locales.deutsch]: deutsch,
 };
 
 export default I18n;
