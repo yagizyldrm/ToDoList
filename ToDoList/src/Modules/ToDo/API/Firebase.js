@@ -92,20 +92,3 @@ export const deleteItem = itemKey => {
         .ref(`/noteList/${itemKey}`)
         .remove();
 }
-
-
-
-
-
-
-/*
-export const getData = () => {
-    database()
-        .ref('/todo')
-        //Reading data: realtime
-        .on('value', snapshot => {
-            console.log('Realtime database: ', snapshot.val());
-        });
-
-    return [];
-}*/

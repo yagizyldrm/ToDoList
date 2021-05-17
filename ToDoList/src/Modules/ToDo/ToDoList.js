@@ -16,8 +16,6 @@ import { useNavigation } from '@react-navigation/core';
 
 
 const ToDoList = props => {
-
-    console.log("ToDoList");
     const [noteList, setNoteList] = useState(null);
     const [isDeleteModeOn, setIsDeleteModeOn] = useState(false);
     const [isDoneList, setIsDoneList] = useState(false);
@@ -26,7 +24,6 @@ const ToDoList = props => {
     const { styles } = useThemedValues(getStyles);
 
     useEffect(() => {
-        console.log("useEffect")
         const off = subscribeToNoteData(noteList => {
             setNoteList(noteList)
         });
@@ -79,7 +76,6 @@ const ToDoList = props => {
     }
 
     const _renderToDoItem = ({ item }) => {
-        console.log('rendertodoitem içi');
 
         return (
             <View style={styles.todoBox}>
@@ -102,7 +98,6 @@ const ToDoList = props => {
     };
 
     const _renderDoneItem = ({ item }) => {
-        console.log('renderDone içi');
         return (
                 <View style={styles.doneBox}>
                 <TouchableOpacity style={styles.checkedIconContainer} onPress = {() => _onPress_Undone(item)} >
@@ -124,7 +119,6 @@ const ToDoList = props => {
     }
     
     return (
-        console.log("todoReturn"),
         <>
         
         <SafeAreaView style={styles.safeArea}>
