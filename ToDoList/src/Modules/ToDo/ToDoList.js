@@ -120,7 +120,6 @@ const ToDoList = props => {
                             data={noteList}
                             renderItem={_renderToDoItem}
                             keyExtractor={item => item.key}
-                            inverted
                         />
                     </View>
                 </View>
@@ -136,7 +135,6 @@ const ToDoList = props => {
                             data={noteList}
                             renderItem={_renderDoneItem}
                             keyExtractor={item => item.key}
-                            inverted
                         />
                     </View>
                 </View>
