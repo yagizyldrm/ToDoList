@@ -10,7 +10,7 @@ import { Svgs } from '../../StylingConstants';
 import getStyles from './Styles/ToDoScreenStyles';
 
 import { useLocalization, texts } from '../Localization';
-import { deleteItem, doneItem, subscribeToNoteData, addNote } from './API/Firebase';
+import { deleteItem, updateNote, subscribeToNoteData} from './API/Firebase';
 import { useNavigation } from '@react-navigation/core';
 
 
@@ -54,17 +54,34 @@ const ToDoList = props => {
         setIsDeleteModeOn(true)
     }
     
-    const _onPress_Done = (itemKey) => {
-        setIsDoneList(true)
+    const _onPress_Done = (item) => {
+        item.isComplated = true
+        updateNote(item)
+    }
+
+    const _onPress_Undone = (item) => {
+        item.isComplated = false
+        updateNote(item)
+    }
+    
+    const getNoteList = (isComplated) => {
+        if (noteList === null) {
+            return null
+        }
+        const resultList = [];
+        for (let index = 0; index < noteList.length; index++) {
+            const noteItem = noteList[index];
+            if (isComplated === noteItem.isComplated) {
+                resultList.push(noteItem)
+            }
+        }
+        return resultList;
     }
 
     const _renderToDoItem = ({ item }) => {
         console.log('rendertodoitem içi');
+
         return (
-            isDoneList 
-            ?
-            null 
-            : 
             <View style={styles.todoBox}>
                 <TouchableOpacity style={styles.checkIconContainer} onPress = {() => _onPress_Done(item)}>
                     <Icon iconStyle={styles.checkIcon} svg={Svgs.Checkbox} />
@@ -87,18 +104,22 @@ const ToDoList = props => {
     const _renderDoneItem = ({ item }) => {
         console.log('renderDone içi');
         return (
-            isDoneList 
-            ? 
                 <View style={styles.doneBox}>
-                <TouchableOpacity style={styles.checkedIconContainer} >
+                <TouchableOpacity style={styles.checkedIconContainer} onPress = {() => _onPress_Undone(item)} >
                     <Icon iconStyle={styles.checkedIcon} svg={Svgs.Checkedbox} />
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.doneTitleContainer}>
+                <TouchableOpacity style={styles.doneTitleContainer}
+                onLongPress={() => _onLongPress_Delete()}
+                onPress={() => _onPress_Edit(item)}
+                >
                     <Text style={styles.doneMessageText}>{item.taskname}</Text>
                 </TouchableOpacity> 
+                <TouchableOpacity style={styles.deleteIconContainer} onPress={() => _onPress_Delete(item)} >
+                    {
+                        isDeleteModeOn ? <Icon iconStyle={styles.deleteIcon} svg={Svgs.DeleteIcon} /> : null
+                    }
+                </TouchableOpacity>
                 </View>
-            :
-                null   
         )
     }
     
@@ -117,7 +138,7 @@ const ToDoList = props => {
                     <View style={styles.todoBoxContainer}>
                         <FlatList
                             style={{ flexGrow: 0 }}
-                            data={noteList}
+                            data={getNoteList(false)}
                             renderItem={_renderToDoItem}
                             keyExtractor={item => item.key}
                         />
@@ -132,7 +153,7 @@ const ToDoList = props => {
                     <View style={styles.todoBoxContainer}>
                         <FlatList
                             style={{ flexGrow: 0 }}
-                            data={noteList}
+                            data={getNoteList(true)}
                             renderItem={_renderDoneItem}
                             keyExtractor={item => item.key}
                         />

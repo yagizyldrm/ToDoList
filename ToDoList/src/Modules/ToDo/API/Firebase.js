@@ -28,7 +28,7 @@ export const addNote = async (item, onComplate) => {
     try {
         const noteThumbnail = {
             taskname: item.taskname,
-            date: item.endDate,
+            isComplated: false,
         };
         const userId = getCurrentUser().uid;
 
@@ -65,6 +65,7 @@ export const updateNote = async (item, onComplate) => {
 
         const noteThumbnail = { 
             taskname: item.taskname,
+            isComplated: item.isComplated
         };
 
         const userId = getCurrentUser().uid;
@@ -93,16 +94,7 @@ export const deleteItem = itemKey => {
 }
 
 
-export const doneItem = itemKey => {
-    const userId = getCurrentUser().uid;
-    database()
-        .ref(`/noteThumbnailList/${userId}/${itemKey}`)
-        .update(itemKey);
 
-    database()
-        .ref(`/noteList/${itemKey}`)
-        .update(itemKey);
-}
 
 
 
