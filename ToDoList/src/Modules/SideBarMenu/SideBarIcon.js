@@ -9,7 +9,7 @@ const getStyles = Color => StyleSheet.create({
     iconContainer: {
         width: Metrics.width * 0.06,
         height: undefined,
-        aspectRatio: 1,
+        aspectRatio: 0,                           // tamamen kaldırmamak için değeri 0'a çektim
         marginRight: Metrics.marginHorizontal,
     },
     icon: {

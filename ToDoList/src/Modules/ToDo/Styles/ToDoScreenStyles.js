@@ -219,7 +219,7 @@ export default Colors => StyleSheet.create({
         borderRadius: Metrics.borderRadiusFullRound,    
     },
     categoryText: {
-        marginLeft: Metrics.width * 0.04, 
+        marginLeft: Metrics.width * 0.02, 
         marginVertical: Metrics.width * 0.02,
     },
     drawerIcons: {
